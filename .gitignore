@@ -1,0 +1,11 @@
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+tests/chrome-*/
+tests/
+videos/build-*/
+videos/*.mp4
+.agents/

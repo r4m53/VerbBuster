@@ -1,0 +1,2908 @@
+{
+  "version": 1,
+  "units": [
+    {
+      "id": "everyday-actions",
+      "number": 1,
+      "title": "Night Ninja's Challenge",
+      "description": "Master eight high-frequency irregular verbs and outsmart Night Ninja.",
+      "theme": "pj-masks",
+      "themeLabel": "PJ Masks",
+      "villain": "Night Ninja",
+      "villainImage": "assets/lesson-villains/01-pj-masks-night-ninja.png",
+      "themeColor": "#283b83",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 01: Training Film",
+        "description": "Meet the eight verbs before facing Night Ninja.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-01.png",
+        "transcriptPath": "docs/video-scripts/unit-01.md"
+      },
+      "verbIds": [
+        "go",
+        "come",
+        "do",
+        "make",
+        "get",
+        "have",
+        "take",
+        "give"
+      ],
+      "openingChallenge": "The night is my playground, Verb Buster. Show me you can master these eight moves before the moon disappears!",
+      "closingChallenge": "Not bad, Verb Buster. Now prove those forms belong to you in the Battle!",
+      "verbs": [
+        {
+          "id": "go",
+          "base": "go",
+          "past": "went",
+          "participle": "gone",
+          "meaning": "ir",
+          "difficulty": 1,
+          "examples": {
+            "base": "I go to school every day.",
+            "past": "We went to the park yesterday.",
+            "participle": "She has gone home."
+          }
+        },
+        {
+          "id": "come",
+          "base": "come",
+          "past": "came",
+          "participle": "come",
+          "meaning": "venir",
+          "difficulty": 1,
+          "examples": {
+            "base": "They come to practice early.",
+            "past": "My friend came to my house.",
+            "participle": "Dad has come back."
+          }
+        },
+        {
+          "id": "do",
+          "base": "do",
+          "past": "did",
+          "participle": "done",
+          "meaning": "hacer",
+          "difficulty": 1,
+          "examples": {
+            "base": "I do my homework after school.",
+            "past": "Leo did a great job.",
+            "participle": "We have done the exercise."
+          }
+        },
+        {
+          "id": "make",
+          "base": "make",
+          "past": "made",
+          "participle": "made",
+          "meaning": "hacer / crear",
+          "difficulty": 1,
+          "examples": {
+            "base": "We make sandwiches for lunch.",
+            "past": "Mia made a paper airplane.",
+            "participle": "They have made a plan."
+          }
+        },
+        {
+          "id": "get",
+          "base": "get",
+          "past": "got",
+          "participle": "gotten",
+          "acceptedParticiples": [
+            "got"
+          ],
+          "meaning": "obtener / llegar",
+          "difficulty": 2,
+          "note": "American English usually uses gotten. British English often uses got.",
+          "examples": {
+            "base": "I get ready at seven.",
+            "past": "Sam got a new backpack.",
+            "participle": "She has gotten stronger."
+          }
+        },
+        {
+          "id": "have",
+          "base": "have",
+          "past": "had",
+          "participle": "had",
+          "meaning": "tener",
+          "difficulty": 1,
+          "examples": {
+            "base": "We have art class today.",
+            "past": "I had cereal for breakfast.",
+            "participle": "They have had enough time."
+          }
+        },
+        {
+          "id": "take",
+          "base": "take",
+          "past": "took",
+          "participle": "taken",
+          "meaning": "tomar / llevar",
+          "difficulty": 2,
+          "examples": {
+            "base": "I take the bus to school.",
+            "past": "Nora took a funny photo.",
+            "participle": "He has taken his notebook."
+          }
+        },
+        {
+          "id": "give",
+          "base": "give",
+          "past": "gave",
+          "participle": "given",
+          "meaning": "dar",
+          "difficulty": 2,
+          "examples": {
+            "base": "I give my dog fresh water.",
+            "past": "Our coach gave us a tip.",
+            "participle": "She has given me a clue."
+          }
+        }
+      ]
+    },
+    {
+      "id": "school-day",
+      "number": 2,
+      "title": "Luna Girl's Challenge",
+      "description": "Master eight high-frequency irregular verbs and outsmart Luna Girl.",
+      "theme": "pj-masks",
+      "themeLabel": "PJ Masks",
+      "villain": "Luna Girl",
+      "villainImage": "assets/lesson-villains/02-pj-masks-luna-girl.png",
+      "themeColor": "#64648c",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 02: Training Film",
+        "description": "Meet the eight verbs before facing Luna Girl.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-02.png",
+        "transcriptPath": "docs/video-scripts/unit-02.md"
+      },
+      "verbIds": [
+        "say",
+        "tell",
+        "know",
+        "think",
+        "see",
+        "hear",
+        "find",
+        "feel"
+      ],
+      "openingChallenge": "Moon power makes everything tricky. Can your verb skills shine brighter than my lunar tricks?",
+      "closingChallenge": "You survived my moonlit challenge. Take that confidence into the Battle!",
+      "verbs": [
+        {
+          "id": "say",
+          "base": "say",
+          "past": "said",
+          "participle": "said",
+          "meaning": "decir",
+          "difficulty": 2,
+          "examples": {
+            "base": "I say hello to my friends.",
+            "past": "Our teacher said good morning.",
+            "participle": "They have said the answer."
+          }
+        },
+        {
+          "id": "tell",
+          "base": "tell",
+          "past": "told",
+          "participle": "told",
+          "meaning": "decir / contar",
+          "difficulty": 2,
+          "examples": {
+            "base": "I tell my class a story.",
+            "past": "Liam told us the news.",
+            "participle": "She has told the truth."
+          }
+        },
+        {
+          "id": "know",
+          "base": "know",
+          "past": "knew",
+          "participle": "known",
+          "meaning": "saber / conocer",
+          "difficulty": 2,
+          "examples": {
+            "base": "I know the answer.",
+            "past": "Ava knew every word.",
+            "participle": "We have known each other for years."
+          }
+        },
+        {
+          "id": "think",
+          "base": "think",
+          "past": "thought",
+          "participle": "thought",
+          "meaning": "pensar",
+          "difficulty": 3,
+          "examples": {
+            "base": "I think about the question.",
+            "past": "Ben thought of a clever idea.",
+            "participle": "They have thought about the problem."
+          }
+        },
+        {
+          "id": "see",
+          "base": "see",
+          "past": "saw",
+          "participle": "seen",
+          "meaning": "ver",
+          "difficulty": 1,
+          "examples": {
+            "base": "I see a bird outside.",
+            "past": "We saw a rainbow yesterday.",
+            "participle": "He has seen that movie."
+          }
+        },
+        {
+          "id": "hear",
+          "base": "hear",
+          "past": "heard",
+          "participle": "heard",
+          "meaning": "oír",
+          "difficulty": 2,
+          "examples": {
+            "base": "I hear music downstairs.",
+            "past": "Mia heard a strange sound.",
+            "participle": "They have heard the news."
+          }
+        },
+        {
+          "id": "find",
+          "base": "find",
+          "past": "found",
+          "participle": "found",
+          "meaning": "encontrar",
+          "difficulty": 2,
+          "examples": {
+            "base": "We find clues in the story.",
+            "past": "I found my missing pencil.",
+            "participle": "She has found the answer."
+          }
+        },
+        {
+          "id": "feel",
+          "base": "feel",
+          "past": "felt",
+          "participle": "felt",
+          "meaning": "sentir",
+          "difficulty": 2,
+          "examples": {
+            "base": "I feel happy today.",
+            "past": "We felt cold outside.",
+            "participle": "He has felt much better."
+          }
+        }
+      ]
+    },
+    {
+      "id": "food-and-drinks",
+      "number": 3,
+      "title": "Romeo's Boss Challenge",
+      "description": "Master eight high-frequency irregular verbs and outsmart Romeo.",
+      "theme": "pj-masks",
+      "themeLabel": "PJ Masks",
+      "villain": "Romeo",
+      "villainImage": "assets/lesson-villains/03-pj-masks-romeo.png",
+      "themeColor": "#4e9b55",
+      "boss": true,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 03: Training Film",
+        "description": "Meet the eight verbs before facing Romeo.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-03.png",
+        "transcriptPath": "docs/video-scripts/unit-03.md"
+      },
+      "verbIds": [
+        "eat",
+        "drink",
+        "buy",
+        "bring",
+        "cut",
+        "feed",
+        "pay",
+        "keep"
+      ],
+      "openingChallenge": "My newest invention scrambles verbs! Let us see whether your brain can put every form back in order.",
+      "closingChallenge": "Impossible! You solved my verb machine. The Battle will be your final test!",
+      "verbs": [
+        {
+          "id": "eat",
+          "base": "eat",
+          "past": "ate",
+          "participle": "eaten",
+          "meaning": "comer",
+          "difficulty": 1,
+          "examples": {
+            "base": "We eat lunch at noon.",
+            "past": "I ate an apple yesterday.",
+            "participle": "She has eaten her sandwich."
+          }
+        },
+        {
+          "id": "drink",
+          "base": "drink",
+          "past": "drank",
+          "participle": "drunk",
+          "meaning": "beber",
+          "difficulty": 2,
+          "examples": {
+            "base": "I drink water after practice.",
+            "past": "Leo drank some milk.",
+            "participle": "We have drunk enough water."
+          }
+        },
+        {
+          "id": "buy",
+          "base": "buy",
+          "past": "bought",
+          "participle": "bought",
+          "meaning": "comprar",
+          "difficulty": 2,
+          "examples": {
+            "base": "They buy fruit at the market.",
+            "past": "Mom bought fresh bread.",
+            "participle": "I have bought a snack."
+          }
+        },
+        {
+          "id": "bring",
+          "base": "bring",
+          "past": "brought",
+          "participle": "brought",
+          "meaning": "traer",
+          "difficulty": 2,
+          "examples": {
+            "base": "I bring my lunch to school.",
+            "past": "Ana brought orange juice.",
+            "participle": "He has brought the plates."
+          }
+        },
+        {
+          "id": "cut",
+          "base": "cut",
+          "past": "cut",
+          "participle": "cut",
+          "meaning": "cortar",
+          "difficulty": 1,
+          "examples": {
+            "base": "I cut the sandwich in half.",
+            "past": "Dad cut the watermelon.",
+            "participle": "She has cut the carrots."
+          }
+        },
+        {
+          "id": "feed",
+          "base": "feed",
+          "past": "fed",
+          "participle": "fed",
+          "meaning": "alimentar",
+          "difficulty": 2,
+          "examples": {
+            "base": "We feed the dog every morning.",
+            "past": "I fed the fish yesterday.",
+            "participle": "They have fed the birds."
+          }
+        },
+        {
+          "id": "pay",
+          "base": "pay",
+          "past": "paid",
+          "participle": "paid",
+          "meaning": "pagar",
+          "difficulty": 2,
+          "examples": {
+            "base": "We pay for our groceries.",
+            "past": "Dad paid for dinner.",
+            "participle": "She has paid the bill."
+          }
+        },
+        {
+          "id": "keep",
+          "base": "keep",
+          "past": "kept",
+          "participle": "kept",
+          "meaning": "guardar / mantener",
+          "difficulty": 2,
+          "examples": {
+            "base": "I keep my notes in a folder.",
+            "past": "She kept the secret.",
+            "participle": "We have kept our promise."
+          }
+        }
+      ]
+    },
+    {
+      "id": "movement-adventure",
+      "number": 4,
+      "title": "Mayor Humdinger's Challenge",
+      "description": "Master eight high-frequency irregular verbs and outsmart Mayor Humdinger.",
+      "theme": "paw-patrol",
+      "themeLabel": "Paw Patrol",
+      "villain": "Mayor Humdinger",
+      "villainImage": "assets/lesson-villains/04-paw-patrol-mayor-humdinger.png",
+      "themeColor": "#7246a8",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 04: Training Film",
+        "description": "Meet the eight verbs before facing Mayor Humdinger.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-04.png",
+        "transcriptPath": "docs/video-scripts/unit-04.md"
+      },
+      "verbIds": [
+        "read",
+        "write",
+        "speak",
+        "teach",
+        "choose",
+        "forget",
+        "understand",
+        "hold"
+      ],
+      "openingChallenge": "No pups can save you from my challenge. Earn every verb before I claim the victory!",
+      "closingChallenge": "You may have beaten this round, but the Battle is waiting for you!",
+      "verbs": [
+        {
+          "id": "read",
+          "base": "read",
+          "past": "read",
+          "participle": "read",
+          "meaning": "leer",
+          "difficulty": 2,
+          "note": "The spelling stays the same, but the past form sounds like “red.”",
+          "examples": {
+            "base": "I read a chapter every night.",
+            "past": "We read a funny story yesterday.",
+            "participle": "She has read that book twice."
+          }
+        },
+        {
+          "id": "write",
+          "base": "write",
+          "past": "wrote",
+          "participle": "written",
+          "meaning": "escribir",
+          "difficulty": 2,
+          "examples": {
+            "base": "I write my name on the page.",
+            "past": "Noah wrote a short poem.",
+            "participle": "We have written three sentences."
+          }
+        },
+        {
+          "id": "speak",
+          "base": "speak",
+          "past": "spoke",
+          "participle": "spoken",
+          "meaning": "hablar",
+          "difficulty": 2,
+          "examples": {
+            "base": "We speak English in class.",
+            "past": "Maya spoke to the teacher.",
+            "participle": "He has spoken clearly."
+          }
+        },
+        {
+          "id": "teach",
+          "base": "teach",
+          "past": "taught",
+          "participle": "taught",
+          "meaning": "enseñar",
+          "difficulty": 3,
+          "examples": {
+            "base": "They teach science at our school.",
+            "past": "Mr. Lee taught us about space.",
+            "participle": "She has taught this lesson before."
+          }
+        },
+        {
+          "id": "choose",
+          "base": "choose",
+          "past": "chose",
+          "participle": "chosen",
+          "meaning": "elegir",
+          "difficulty": 3,
+          "examples": {
+            "base": "We choose a healthy snack.",
+            "past": "Sam chose the red apple.",
+            "participle": "They have chosen the menu."
+          }
+        },
+        {
+          "id": "forget",
+          "base": "forget",
+          "past": "forgot",
+          "participle": "forgotten",
+          "meaning": "olvidar",
+          "difficulty": 3,
+          "examples": {
+            "base": "I sometimes forget my keys.",
+            "past": "Ben forgot his homework.",
+            "participle": "We have forgotten the password."
+          }
+        },
+        {
+          "id": "understand",
+          "base": "understand",
+          "past": "understood",
+          "participle": "understood",
+          "meaning": "entender",
+          "difficulty": 3,
+          "examples": {
+            "base": "I understand the instructions.",
+            "past": "They understood the question.",
+            "participle": "She has understood the lesson."
+          }
+        },
+        {
+          "id": "hold",
+          "base": "hold",
+          "past": "held",
+          "participle": "held",
+          "meaning": "sostener",
+          "difficulty": 2,
+          "examples": {
+            "base": "I hold the door open.",
+            "past": "Max held the trophy.",
+            "participle": "She has held the record for years."
+          }
+        }
+      ]
+    },
+    {
+      "id": "senses-and-ideas",
+      "number": 5,
+      "title": "Sweetie's Challenge",
+      "description": "Master eight high-frequency irregular verbs and outsmart Sweetie.",
+      "theme": "paw-patrol",
+      "themeLabel": "Paw Patrol",
+      "villain": "Sweetie",
+      "villainImage": "assets/lesson-villains/05-paw-patrol-sweetie.png",
+      "themeColor": "#a75bd0",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 05: Training Film",
+        "description": "Meet the eight verbs before facing Sweetie.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-05.png",
+        "transcriptPath": "docs/video-scripts/unit-05.md"
+      },
+      "verbIds": [
+        "run",
+        "ride",
+        "drive",
+        "fly",
+        "swim",
+        "fall",
+        "leave",
+        "become"
+      ],
+      "openingChallenge": "A royal challenge deserves a royal champion. Show me whether you are worthy of these eight verbs!",
+      "closingChallenge": "You handled my royal test. Now win the Battle like a true champion!",
+      "verbs": [
+        {
+          "id": "run",
+          "base": "run",
+          "past": "ran",
+          "participle": "run",
+          "meaning": "correr",
+          "difficulty": 1,
+          "examples": {
+            "base": "I run around the track.",
+            "past": "We ran to the finish line.",
+            "participle": "He has run five laps."
+          }
+        },
+        {
+          "id": "ride",
+          "base": "ride",
+          "past": "rode",
+          "participle": "ridden",
+          "meaning": "montar",
+          "difficulty": 2,
+          "examples": {
+            "base": "I ride my bike after school.",
+            "past": "Ella rode a horse yesterday.",
+            "participle": "We have ridden that trail."
+          }
+        },
+        {
+          "id": "drive",
+          "base": "drive",
+          "past": "drove",
+          "participle": "driven",
+          "meaning": "conducir",
+          "difficulty": 2,
+          "examples": {
+            "base": "My parents drive to work.",
+            "past": "Dad drove us to the park.",
+            "participle": "She has driven this road before."
+          }
+        },
+        {
+          "id": "fly",
+          "base": "fly",
+          "past": "flew",
+          "participle": "flown",
+          "meaning": "volar",
+          "difficulty": 2,
+          "examples": {
+            "base": "Birds fly over the trees.",
+            "past": "The kite flew very high.",
+            "participle": "We have flown in an airplane."
+          }
+        },
+        {
+          "id": "swim",
+          "base": "swim",
+          "past": "swam",
+          "participle": "swum",
+          "meaning": "nadar",
+          "difficulty": 3,
+          "examples": {
+            "base": "I swim every Saturday.",
+            "past": "They swam across the pool.",
+            "participle": "She has swum in the ocean."
+          }
+        },
+        {
+          "id": "fall",
+          "base": "fall",
+          "past": "fell",
+          "participle": "fallen",
+          "meaning": "caer",
+          "difficulty": 2,
+          "examples": {
+            "base": "Leaves fall from the trees.",
+            "past": "The ball fell off the table.",
+            "participle": "Snow has fallen all night."
+          }
+        },
+        {
+          "id": "leave",
+          "base": "leave",
+          "past": "left",
+          "participle": "left",
+          "meaning": "salir / dejar",
+          "difficulty": 2,
+          "examples": {
+            "base": "We leave home at eight.",
+            "past": "The bus left early.",
+            "participle": "They have left the building."
+          }
+        },
+        {
+          "id": "become",
+          "base": "become",
+          "past": "became",
+          "participle": "become",
+          "meaning": "convertirse",
+          "difficulty": 3,
+          "examples": {
+            "base": "Caterpillars become butterflies.",
+            "past": "The day became warmer.",
+            "participle": "She has become a strong swimmer."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-06",
+      "number": 6,
+      "title": "Copycat's Boss Challenge",
+      "description": "Master eight high-frequency irregular verbs and outsmart Copycat.",
+      "theme": "paw-patrol",
+      "themeLabel": "Paw Patrol",
+      "villain": "Copycat",
+      "villainImage": "assets/lesson-villains/06-paw-patrol-copycat.png",
+      "themeColor": "#e87828",
+      "boss": true,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 06: Training Film",
+        "description": "Meet the eight verbs before facing Copycat.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-06.png",
+        "transcriptPath": "docs/video-scripts/unit-06.md"
+      },
+      "verbIds": [
+        "begin",
+        "break",
+        "build",
+        "catch",
+        "draw",
+        "grow",
+        "learn",
+        "meet"
+      ],
+      "openingChallenge": "I can copy every move you make. Can you remember the forms when I mix them all together?",
+      "closingChallenge": "Your verb skills are harder to copy than I expected. Finish the job in the Battle!",
+      "verbs": [
+        {
+          "id": "begin",
+          "base": "begin",
+          "past": "began",
+          "participle": "begun",
+          "meaning": "empezar",
+          "difficulty": 2,
+          "examples": {
+            "base": "I begin the game after lunch.",
+            "past": "Yesterday, I began the game after lunch.",
+            "participle": "I have begun the game after lunch."
+          }
+        },
+        {
+          "id": "break",
+          "base": "break",
+          "past": "broke",
+          "participle": "broken",
+          "meaning": "romper",
+          "difficulty": 2,
+          "examples": {
+            "base": "We break a chocolate bar into pieces.",
+            "past": "Last week, we broke a chocolate bar into pieces.",
+            "participle": "We have broken a chocolate bar into pieces."
+          }
+        },
+        {
+          "id": "build",
+          "base": "build",
+          "past": "built",
+          "participle": "built",
+          "meaning": "construir",
+          "difficulty": 2,
+          "examples": {
+            "base": "They build models with wooden blocks.",
+            "past": "Earlier, they built models with wooden blocks.",
+            "participle": "They have built models with wooden blocks."
+          }
+        },
+        {
+          "id": "catch",
+          "base": "catch",
+          "past": "caught",
+          "participle": "caught",
+          "meaning": "atrapar",
+          "difficulty": 2,
+          "examples": {
+            "base": "My friends catch the ball with both hands.",
+            "past": "Yesterday, my friends caught the ball with both hands.",
+            "participle": "My friends have caught the ball with both hands."
+          }
+        },
+        {
+          "id": "draw",
+          "base": "draw",
+          "past": "drew",
+          "participle": "drawn",
+          "meaning": "dibujar",
+          "difficulty": 2,
+          "examples": {
+            "base": "I draw comic heroes in our notebooks.",
+            "past": "Yesterday, I drew comic heroes in our notebooks.",
+            "participle": "I have drawn comic heroes in our notebooks."
+          }
+        },
+        {
+          "id": "grow",
+          "base": "grow",
+          "past": "grew",
+          "participle": "grown",
+          "meaning": "crecer",
+          "difficulty": 2,
+          "examples": {
+            "base": "We grow tomatoes in the school garden.",
+            "past": "Last week, we grew tomatoes in the school garden.",
+            "participle": "We have grown tomatoes in the school garden."
+          }
+        },
+        {
+          "id": "learn",
+          "base": "learn",
+          "past": "learned",
+          "participle": "learned",
+          "meaning": "aprender",
+          "difficulty": 2,
+          "examples": {
+            "base": "They learn new words through stories.",
+            "past": "Earlier, they learned new words through stories.",
+            "participle": "They have learned new words through stories."
+          }
+        },
+        {
+          "id": "meet",
+          "base": "meet",
+          "past": "met",
+          "participle": "met",
+          "meaning": "conocer / reunirse",
+          "difficulty": 2,
+          "examples": {
+            "base": "My friends meet our teammates at the library.",
+            "past": "Yesterday, my friends met our teammates at the library.",
+            "participle": "My friends have met our teammates at the library."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-07",
+      "number": 7,
+      "title": "Admiral Zhao's Challenge",
+      "description": "Master eight intermediate irregular verbs and outsmart Admiral Zhao.",
+      "theme": "avatar",
+      "themeLabel": "Avatar",
+      "villain": "Admiral Zhao",
+      "villainImage": "assets/lesson-villains/07-avatar-admiral-zhao.png",
+      "themeColor": "#9e3828",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 07: Training Film",
+        "description": "Meet the eight verbs before facing Admiral Zhao.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-07.png",
+        "transcriptPath": "docs/video-scripts/unit-07.md"
+      },
+      "verbIds": [
+        "sing",
+        "ring",
+        "sit",
+        "sleep",
+        "stand",
+        "wake",
+        "wear",
+        "win"
+      ],
+      "openingChallenge": "Discipline wins every fight. Control these eight verbs, or my challenge will stop your advance!",
+      "closingChallenge": "You held your ground. Carry that discipline into the Battle!",
+      "verbs": [
+        {
+          "id": "sing",
+          "base": "sing",
+          "past": "sang",
+          "participle": "sung",
+          "meaning": "cantar",
+          "difficulty": 2,
+          "examples": {
+            "base": "I sing our favorite song together.",
+            "past": "Yesterday, I sang our favorite song together.",
+            "participle": "I have sung our favorite song together."
+          }
+        },
+        {
+          "id": "ring",
+          "base": "ring",
+          "past": "rang",
+          "participle": "rung",
+          "meaning": "sonar",
+          "difficulty": 2,
+          "examples": {
+            "base": "We ring the bell at the front desk.",
+            "past": "Last week, we rang the bell at the front desk.",
+            "participle": "We have rung the bell at the front desk."
+          }
+        },
+        {
+          "id": "sit",
+          "base": "sit",
+          "past": "sat",
+          "participle": "sat",
+          "meaning": "sentarse",
+          "difficulty": 2,
+          "examples": {
+            "base": "They sit near the window on the bus.",
+            "past": "Earlier, they sat near the window on the bus.",
+            "participle": "They have sat near the window on the bus."
+          }
+        },
+        {
+          "id": "sleep",
+          "base": "sleep",
+          "past": "slept",
+          "participle": "slept",
+          "meaning": "dormir",
+          "difficulty": 2,
+          "examples": {
+            "base": "My friends sleep under warm blankets.",
+            "past": "Yesterday, my friends slept under warm blankets.",
+            "participle": "My friends have slept under warm blankets."
+          }
+        },
+        {
+          "id": "stand",
+          "base": "stand",
+          "past": "stood",
+          "participle": "stood",
+          "meaning": "estar de pie",
+          "difficulty": 2,
+          "examples": {
+            "base": "I stand in line before class.",
+            "past": "Yesterday, I stood in line before class.",
+            "participle": "I have stood in line before class."
+          }
+        },
+        {
+          "id": "wake",
+          "base": "wake",
+          "past": "woke",
+          "participle": "woken",
+          "meaning": "despertar",
+          "difficulty": 2,
+          "examples": {
+            "base": "We wake before sunrise on camping trips.",
+            "past": "Last week, we woke before sunrise on camping trips.",
+            "participle": "We have woken before sunrise on camping trips."
+          }
+        },
+        {
+          "id": "wear",
+          "base": "wear",
+          "past": "wore",
+          "participle": "worn",
+          "meaning": "vestir",
+          "difficulty": 2,
+          "examples": {
+            "base": "They wear helmets when we ride.",
+            "past": "Earlier, they wore helmets when we ride.",
+            "participle": "They have worn helmets when we ride."
+          }
+        },
+        {
+          "id": "win",
+          "base": "win",
+          "past": "won",
+          "participle": "won",
+          "meaning": "ganar",
+          "difficulty": 2,
+          "examples": {
+            "base": "My friends win close matches with teamwork.",
+            "past": "Yesterday, my friends won close matches with teamwork.",
+            "participle": "My friends have won close matches with teamwork."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-08",
+      "number": 8,
+      "title": "Azula's Challenge",
+      "description": "Master eight intermediate irregular verbs and outsmart Azula.",
+      "theme": "avatar",
+      "themeLabel": "Avatar",
+      "villain": "Azula",
+      "villainImage": "assets/lesson-villains/08-avatar-azula.png",
+      "themeColor": "#b52e2e",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 08: Training Film",
+        "description": "Meet the eight verbs before facing Azula.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-08.png",
+        "transcriptPath": "docs/video-scripts/unit-08.md"
+      },
+      "verbIds": [
+        "blow",
+        "bite",
+        "hide",
+        "shake",
+        "show",
+        "throw",
+        "tear",
+        "steal"
+      ],
+      "openingChallenge": "One mistake is all I need. Keep your focus and master every form, Verb Buster.",
+      "closingChallenge": "You stayed focused under pressure. Now face the Battle!",
+      "verbs": [
+        {
+          "id": "blow",
+          "base": "blow",
+          "past": "blew",
+          "participle": "blown",
+          "meaning": "soplar",
+          "difficulty": 2,
+          "examples": {
+            "base": "I blow bubbles in the backyard.",
+            "past": "Yesterday, I blew bubbles in the backyard.",
+            "participle": "I have blown bubbles in the backyard."
+          }
+        },
+        {
+          "id": "bite",
+          "base": "bite",
+          "past": "bit",
+          "participle": "bitten",
+          "meaning": "morder",
+          "difficulty": 2,
+          "examples": {
+            "base": "We bite crisp apples at snack time.",
+            "past": "Last week, we bit crisp apples at snack time.",
+            "participle": "We have bitten crisp apples at snack time."
+          }
+        },
+        {
+          "id": "hide",
+          "base": "hide",
+          "past": "hid",
+          "participle": "hidden",
+          "meaning": "esconder",
+          "difficulty": 2,
+          "examples": {
+            "base": "They hide treasure under the old tree.",
+            "past": "Earlier, they hid treasure under the old tree.",
+            "participle": "They have hidden treasure under the old tree."
+          }
+        },
+        {
+          "id": "shake",
+          "base": "shake",
+          "past": "shook",
+          "participle": "shaken",
+          "meaning": "sacudir",
+          "difficulty": 2,
+          "examples": {
+            "base": "My friends shake the bottle before opening it.",
+            "past": "Yesterday, my friends shook the bottle before opening it.",
+            "participle": "My friends have shaken the bottle before opening it."
+          }
+        },
+        {
+          "id": "show",
+          "base": "show",
+          "past": "showed",
+          "participle": "shown",
+          "meaning": "mostrar",
+          "difficulty": 2,
+          "examples": {
+            "base": "I show our projects to the class.",
+            "past": "Yesterday, I showed our projects to the class.",
+            "participle": "I have shown our projects to the class."
+          }
+        },
+        {
+          "id": "throw",
+          "base": "throw",
+          "past": "threw",
+          "participle": "thrown",
+          "meaning": "lanzar",
+          "difficulty": 2,
+          "examples": {
+            "base": "We throw paper planes across the room.",
+            "past": "Last week, we threw paper planes across the room.",
+            "participle": "We have thrown paper planes across the room."
+          }
+        },
+        {
+          "id": "tear",
+          "base": "tear",
+          "past": "tore",
+          "participle": "torn",
+          "meaning": "rasgar",
+          "difficulty": 2,
+          "examples": {
+            "base": "They tear old paper for the collage.",
+            "past": "Earlier, they tore old paper for the collage.",
+            "participle": "They have torn old paper for the collage."
+          }
+        },
+        {
+          "id": "steal",
+          "base": "steal",
+          "past": "stole",
+          "participle": "stolen",
+          "meaning": "robar",
+          "difficulty": 2,
+          "examples": {
+            "base": "My friends steal bases in our baseball games.",
+            "past": "Yesterday, my friends stole bases in our baseball games.",
+            "participle": "My friends have stolen bases in our baseball games."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-09",
+      "number": 9,
+      "title": "Fire Lord Ozai's Boss Challenge",
+      "description": "Master eight intermediate irregular verbs and outsmart Fire Lord Ozai.",
+      "theme": "avatar",
+      "themeLabel": "Avatar",
+      "villain": "Fire Lord Ozai",
+      "villainImage": "assets/lesson-villains/09-avatar-fire-lord-ozai.png",
+      "themeColor": "#6f1f18",
+      "boss": true,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 09: Training Film",
+        "description": "Meet the eight verbs before facing Fire Lord Ozai.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-09.png",
+        "transcriptPath": "docs/video-scripts/unit-09.md"
+      },
+      "verbIds": [
+        "bend",
+        "bleed",
+        "burn",
+        "cost",
+        "dig",
+        "dream",
+        "fight",
+        "hang"
+      ],
+      "openingChallenge": "Power is earned through mastery. Prove that your command of verbs is strong enough to continue.",
+      "closingChallenge": "Your training has made you stronger. Let the Battle decide the rest!",
+      "verbs": [
+        {
+          "id": "bend",
+          "base": "bend",
+          "past": "bent",
+          "participle": "bent",
+          "meaning": "doblar",
+          "difficulty": 3,
+          "examples": {
+            "base": "I bend the wire into a circle.",
+            "past": "Yesterday, I bent the wire into a circle.",
+            "participle": "I have bent the wire into a circle."
+          }
+        },
+        {
+          "id": "bleed",
+          "base": "bleed",
+          "past": "bled",
+          "participle": "bled",
+          "meaning": "sangrar",
+          "difficulty": 3,
+          "examples": {
+            "base": "We bleed when a deep cut needs attention.",
+            "past": "Last week, we bled when a deep cut needs attention.",
+            "participle": "We have bled when a deep cut needs attention."
+          }
+        },
+        {
+          "id": "burn",
+          "base": "burn",
+          "past": "burned",
+          "participle": "burned",
+          "meaning": "quemar",
+          "difficulty": 3,
+          "examples": {
+            "base": "They burn dry leaves only with adult supervision.",
+            "past": "Earlier, they burned dry leaves only with adult supervision.",
+            "participle": "They have burned dry leaves only with adult supervision."
+          }
+        },
+        {
+          "id": "cost",
+          "base": "cost",
+          "past": "cost",
+          "participle": "cost",
+          "meaning": "costar",
+          "difficulty": 3,
+          "examples": {
+            "base": "My friends cost less when we shop carefully.",
+            "past": "Yesterday, my friends cost less when we shop carefully.",
+            "participle": "My friends have cost less when we shop carefully."
+          }
+        },
+        {
+          "id": "dig",
+          "base": "dig",
+          "past": "dug",
+          "participle": "dug",
+          "meaning": "cavar",
+          "difficulty": 3,
+          "examples": {
+            "base": "I dig holes for new plants.",
+            "past": "Yesterday, I dug holes for new plants.",
+            "participle": "I have dug holes for new plants."
+          }
+        },
+        {
+          "id": "dream",
+          "base": "dream",
+          "past": "dreamed",
+          "participle": "dreamed",
+          "meaning": "soñar",
+          "difficulty": 3,
+          "examples": {
+            "base": "We dream about exploring distant planets.",
+            "past": "Last week, we dreamed about exploring distant planets.",
+            "participle": "We have dreamed about exploring distant planets."
+          }
+        },
+        {
+          "id": "fight",
+          "base": "fight",
+          "past": "fought",
+          "participle": "fought",
+          "meaning": "luchar",
+          "difficulty": 3,
+          "examples": {
+            "base": "They fight for what is fair.",
+            "past": "Earlier, they fought for what is fair.",
+            "participle": "They have fought for what is fair."
+          }
+        },
+        {
+          "id": "hang",
+          "base": "hang",
+          "past": "hung",
+          "participle": "hung",
+          "meaning": "colgar",
+          "difficulty": 3,
+          "examples": {
+            "base": "My friends hang our jackets beside the door.",
+            "past": "Yesterday, my friends hung our jackets beside the door.",
+            "participle": "My friends have hung our jackets beside the door."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-10",
+      "number": 10,
+      "title": "Draco Malfoy's Challenge",
+      "description": "Master eight intermediate irregular verbs and outsmart Draco Malfoy.",
+      "theme": "harry-potter",
+      "themeLabel": "Harry Potter",
+      "villain": "Draco Malfoy",
+      "villainImage": "assets/lesson-villains/10-harry-potter-draco-malfoy.png",
+      "themeColor": "#66815c",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 10: Training Film",
+        "description": "Meet the eight verbs before facing Draco Malfoy.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-10.png",
+        "transcriptPath": "docs/video-scripts/unit-10.md"
+      },
+      "verbIds": [
+        "lead",
+        "lend",
+        "light",
+        "lose",
+        "mean",
+        "send",
+        "spend",
+        "sell"
+      ],
+      "openingChallenge": "Think you know these spells—I mean verbs? I doubt you can master all eight without making a mistake.",
+      "closingChallenge": "You were luckier than I expected. Try that confidence in the Battle!",
+      "verbs": [
+        {
+          "id": "lead",
+          "base": "lead",
+          "past": "led",
+          "participle": "led",
+          "meaning": "liderar",
+          "difficulty": 3,
+          "examples": {
+            "base": "I lead the team through each challenge.",
+            "past": "Yesterday, I led the team through each challenge.",
+            "participle": "I have led the team through each challenge."
+          }
+        },
+        {
+          "id": "lend",
+          "base": "lend",
+          "past": "lent",
+          "participle": "lent",
+          "meaning": "prestar",
+          "difficulty": 3,
+          "examples": {
+            "base": "We lend books to classmates who need them.",
+            "past": "Last week, we lent books to classmates who need them.",
+            "participle": "We have lent books to classmates who need them."
+          }
+        },
+        {
+          "id": "light",
+          "base": "light",
+          "past": "lit",
+          "participle": "lit",
+          "meaning": "encender",
+          "difficulty": 3,
+          "examples": {
+            "base": "They light candles for special celebrations.",
+            "past": "Earlier, they lit candles for special celebrations.",
+            "participle": "They have lit candles for special celebrations."
+          }
+        },
+        {
+          "id": "lose",
+          "base": "lose",
+          "past": "lost",
+          "participle": "lost",
+          "meaning": "perder",
+          "difficulty": 3,
+          "examples": {
+            "base": "My friends lose points when we rush.",
+            "past": "Yesterday, my friends lost points when we rush.",
+            "participle": "My friends have lost points when we rush."
+          }
+        },
+        {
+          "id": "mean",
+          "base": "mean",
+          "past": "meant",
+          "participle": "meant",
+          "meaning": "significar",
+          "difficulty": 3,
+          "examples": {
+            "base": "I mean exactly what we say.",
+            "past": "Yesterday, I meant exactly what we say.",
+            "participle": "I have meant exactly what we say."
+          }
+        },
+        {
+          "id": "send",
+          "base": "send",
+          "past": "sent",
+          "participle": "sent",
+          "meaning": "enviar",
+          "difficulty": 3,
+          "examples": {
+            "base": "We send messages to our cousins.",
+            "past": "Last week, we sent messages to our cousins.",
+            "participle": "We have sent messages to our cousins."
+          }
+        },
+        {
+          "id": "spend",
+          "base": "spend",
+          "past": "spent",
+          "participle": "spent",
+          "meaning": "gastar / pasar",
+          "difficulty": 3,
+          "examples": {
+            "base": "They spend time reading after dinner.",
+            "past": "Earlier, they spent time reading after dinner.",
+            "participle": "They have spent time reading after dinner."
+          }
+        },
+        {
+          "id": "sell",
+          "base": "sell",
+          "past": "sold",
+          "participle": "sold",
+          "meaning": "vender",
+          "difficulty": 3,
+          "examples": {
+            "base": "My friends sell lemonade at the school fair.",
+            "past": "Yesterday, my friends sold lemonade at the school fair.",
+            "participle": "My friends have sold lemonade at the school fair."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-11",
+      "number": 11,
+      "title": "Bellatrix Lestrange's Challenge",
+      "description": "Master eight intermediate irregular verbs and outsmart Bellatrix Lestrange.",
+      "theme": "harry-potter",
+      "themeLabel": "Harry Potter",
+      "villain": "Bellatrix Lestrange",
+      "villainImage": "assets/lesson-villains/11-harry-potter-bellatrix-lestrange.png",
+      "themeColor": "#513b68",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 11: Training Film",
+        "description": "Meet the eight verbs before facing Bellatrix Lestrange.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-11.png",
+        "transcriptPath": "docs/video-scripts/unit-11.md"
+      },
+      "verbIds": [
+        "set",
+        "shut",
+        "hit",
+        "hurt",
+        "let",
+        "put",
+        "spread",
+        "split"
+      ],
+      "openingChallenge": "These verbs will twist and change like dark magic. Keep up, if you can!",
+      "closingChallenge": "You escaped my challenge, but the Battle may still catch you!",
+      "verbs": [
+        {
+          "id": "set",
+          "base": "set",
+          "past": "set",
+          "participle": "set",
+          "meaning": "colocar",
+          "difficulty": 3,
+          "examples": {
+            "base": "I set the table before dinner.",
+            "past": "Yesterday, I set the table before dinner.",
+            "participle": "I have set the table before dinner."
+          }
+        },
+        {
+          "id": "shut",
+          "base": "shut",
+          "past": "shut",
+          "participle": "shut",
+          "meaning": "cerrar",
+          "difficulty": 3,
+          "examples": {
+            "base": "We shut the windows when it rains.",
+            "past": "Last week, we shut the windows when it rains.",
+            "participle": "We have shut the windows when it rains."
+          }
+        },
+        {
+          "id": "hit",
+          "base": "hit",
+          "past": "hit",
+          "participle": "hit",
+          "meaning": "golpear",
+          "difficulty": 3,
+          "examples": {
+            "base": "They hit the target with a foam ball.",
+            "past": "Earlier, they hit the target with a foam ball.",
+            "participle": "They have hit the target with a foam ball."
+          }
+        },
+        {
+          "id": "hurt",
+          "base": "hurt",
+          "past": "hurt",
+          "participle": "hurt",
+          "meaning": "lastimar",
+          "difficulty": 3,
+          "examples": {
+            "base": "My friends hurt our knees when we fall.",
+            "past": "Yesterday, my friends hurt our knees when we fall.",
+            "participle": "My friends have hurt our knees when we fall."
+          }
+        },
+        {
+          "id": "let",
+          "base": "let",
+          "past": "let",
+          "participle": "let",
+          "meaning": "permitir",
+          "difficulty": 3,
+          "examples": {
+            "base": "I let our friends choose the next game.",
+            "past": "Yesterday, I let our friends choose the next game.",
+            "participle": "I have let our friends choose the next game."
+          }
+        },
+        {
+          "id": "put",
+          "base": "put",
+          "past": "put",
+          "participle": "put",
+          "meaning": "poner",
+          "difficulty": 3,
+          "examples": {
+            "base": "We put our supplies in the cabinet.",
+            "past": "Last week, we put our supplies in the cabinet.",
+            "participle": "We have put our supplies in the cabinet."
+          }
+        },
+        {
+          "id": "spread",
+          "base": "spread",
+          "past": "spread",
+          "participle": "spread",
+          "meaning": "extender",
+          "difficulty": 3,
+          "examples": {
+            "base": "They spread a blanket across the grass.",
+            "past": "Earlier, they spread a blanket across the grass.",
+            "participle": "They have spread a blanket across the grass."
+          }
+        },
+        {
+          "id": "split",
+          "base": "split",
+          "past": "split",
+          "participle": "split",
+          "meaning": "dividir",
+          "difficulty": 3,
+          "examples": {
+            "base": "My friends split the work into equal parts.",
+            "past": "Yesterday, my friends split the work into equal parts.",
+            "participle": "My friends have split the work into equal parts."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-12",
+      "number": 12,
+      "title": "Voldemort's Boss Challenge",
+      "description": "Master eight intermediate irregular verbs and outsmart Voldemort.",
+      "theme": "harry-potter",
+      "themeLabel": "Harry Potter",
+      "villain": "Voldemort",
+      "villainImage": "assets/lesson-villains/12-harry-potter-voldemort.png",
+      "themeColor": "#3c4b45",
+      "boss": true,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 12: Training Film",
+        "description": "Meet the eight verbs before facing Voldemort.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-12.png",
+        "transcriptPath": "docs/video-scripts/unit-12.md"
+      },
+      "verbIds": [
+        "rise",
+        "seek",
+        "slide",
+        "smell",
+        "speed",
+        "spell",
+        "spin",
+        "spring"
+      ],
+      "openingChallenge": "Every word carries power. Master these forms, or your journey ends here.",
+      "closingChallenge": "You have learned the forms. Now prove your power in the Battle!",
+      "verbs": [
+        {
+          "id": "rise",
+          "base": "rise",
+          "past": "rose",
+          "participle": "risen",
+          "meaning": "elevarse",
+          "difficulty": 4,
+          "examples": {
+            "base": "I rise early for important adventures.",
+            "past": "Yesterday, I rose early for important adventures.",
+            "participle": "I have risen early for important adventures."
+          }
+        },
+        {
+          "id": "seek",
+          "base": "seek",
+          "past": "sought",
+          "participle": "sought",
+          "meaning": "buscar",
+          "difficulty": 4,
+          "examples": {
+            "base": "We seek answers in trusted books.",
+            "past": "Last week, we sought answers in trusted books.",
+            "participle": "We have sought answers in trusted books."
+          }
+        },
+        {
+          "id": "slide",
+          "base": "slide",
+          "past": "slid",
+          "participle": "slid",
+          "meaning": "deslizar",
+          "difficulty": 4,
+          "examples": {
+            "base": "They slide down the snowy hill.",
+            "past": "Earlier, they slid down the snowy hill.",
+            "participle": "They have slid down the snowy hill."
+          }
+        },
+        {
+          "id": "smell",
+          "base": "smell",
+          "past": "smelled",
+          "participle": "smelled",
+          "meaning": "oler",
+          "difficulty": 4,
+          "examples": {
+            "base": "My friends smell fresh bread from the kitchen.",
+            "past": "Yesterday, my friends smelled fresh bread from the kitchen.",
+            "participle": "My friends have smelled fresh bread from the kitchen."
+          }
+        },
+        {
+          "id": "speed",
+          "base": "speed",
+          "past": "sped",
+          "participle": "sped",
+          "meaning": "acelerar",
+          "difficulty": 4,
+          "examples": {
+            "base": "I speed along the track on our bikes.",
+            "past": "Yesterday, I sped along the track on our bikes.",
+            "participle": "I have sped along the track on our bikes."
+          }
+        },
+        {
+          "id": "spell",
+          "base": "spell",
+          "past": "spelled",
+          "participle": "spelled",
+          "meaning": "deletrear",
+          "difficulty": 4,
+          "examples": {
+            "base": "We spell difficult words one letter at a time.",
+            "past": "Last week, we spelled difficult words one letter at a time.",
+            "participle": "We have spelled difficult words one letter at a time."
+          }
+        },
+        {
+          "id": "spin",
+          "base": "spin",
+          "past": "spun",
+          "participle": "spun",
+          "meaning": "girar",
+          "difficulty": 4,
+          "examples": {
+            "base": "They spin the wheel to choose a challenge.",
+            "past": "Earlier, they spun the wheel to choose a challenge.",
+            "participle": "They have spun the wheel to choose a challenge."
+          }
+        },
+        {
+          "id": "spring",
+          "base": "spring",
+          "past": "sprang",
+          "participle": "sprung",
+          "meaning": "saltar / brotar",
+          "difficulty": 4,
+          "examples": {
+            "base": "My friends spring into action when the whistle blows.",
+            "past": "Yesterday, my friends sprang into action when the whistle blows.",
+            "participle": "My friends have sprung into action when the whistle blows."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-13",
+      "number": 13,
+      "title": "Cassios's Challenge",
+      "description": "Master eight advanced irregular verbs and outsmart Cassios.",
+      "theme": "zodiac-knights",
+      "themeLabel": "Zodiac Knights",
+      "villain": "Cassios",
+      "villainImage": "assets/lesson-villains/13-zodiac-knights-cassios.png",
+      "themeColor": "#8d563d",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 13: Training Film",
+        "description": "Meet the eight verbs before facing Cassios.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-13.png",
+        "transcriptPath": "docs/video-scripts/unit-13.md"
+      },
+      "verbIds": [
+        "stick",
+        "sting",
+        "stink",
+        "strike",
+        "sweep",
+        "swing",
+        "weep",
+        "wind"
+      ],
+      "openingChallenge": "Strength alone will crush your little word game. Show me these verbs can stand against me!",
+      "closingChallenge": "Your verbs were stronger than they looked. Take them into the Battle!",
+      "verbs": [
+        {
+          "id": "stick",
+          "base": "stick",
+          "past": "stuck",
+          "participle": "stuck",
+          "meaning": "pegar",
+          "difficulty": 4,
+          "examples": {
+            "base": "I stick notes onto the classroom board.",
+            "past": "Yesterday, I stuck notes onto the classroom board.",
+            "participle": "I have stuck notes onto the classroom board."
+          }
+        },
+        {
+          "id": "sting",
+          "base": "sting",
+          "past": "stung",
+          "participle": "stung",
+          "meaning": "picar",
+          "difficulty": 4,
+          "examples": {
+            "base": "We sting only when they feel threatened.",
+            "past": "Last week, we stung only when they feel threatened.",
+            "participle": "We have stung only when they feel threatened."
+          }
+        },
+        {
+          "id": "stink",
+          "base": "stink",
+          "past": "stank",
+          "participle": "stunk",
+          "meaning": "apestar",
+          "difficulty": 4,
+          "examples": {
+            "base": "They stink after sitting in the sun too long.",
+            "past": "Earlier, they stank after sitting in the sun too long.",
+            "participle": "They have stunk after sitting in the sun too long."
+          }
+        },
+        {
+          "id": "strike",
+          "base": "strike",
+          "past": "struck",
+          "participle": "struck",
+          "meaning": "golpear",
+          "difficulty": 4,
+          "examples": {
+            "base": "My friends strike the drum with a soft mallet.",
+            "past": "Yesterday, my friends struck the drum with a soft mallet.",
+            "participle": "My friends have struck the drum with a soft mallet."
+          }
+        },
+        {
+          "id": "sweep",
+          "base": "sweep",
+          "past": "swept",
+          "participle": "swept",
+          "meaning": "barrer",
+          "difficulty": 4,
+          "examples": {
+            "base": "I sweep the floor after the activity.",
+            "past": "Yesterday, I swept the floor after the activity.",
+            "participle": "I have swept the floor after the activity."
+          }
+        },
+        {
+          "id": "swing",
+          "base": "swing",
+          "past": "swung",
+          "participle": "swung",
+          "meaning": "balancearse",
+          "difficulty": 4,
+          "examples": {
+            "base": "We swing across the playground bars.",
+            "past": "Last week, we swung across the playground bars.",
+            "participle": "We have swung across the playground bars."
+          }
+        },
+        {
+          "id": "weep",
+          "base": "weep",
+          "past": "wept",
+          "participle": "wept",
+          "meaning": "llorar",
+          "difficulty": 4,
+          "examples": {
+            "base": "They weep during the saddest part of the story.",
+            "past": "Earlier, they wept during the saddest part of the story.",
+            "participle": "They have wept during the saddest part of the story."
+          }
+        },
+        {
+          "id": "wind",
+          "base": "wind",
+          "past": "wound",
+          "participle": "wound",
+          "meaning": "enrollar",
+          "difficulty": 4,
+          "examples": {
+            "base": "My friends wind the string around the spool.",
+            "past": "Yesterday, my friends wound the string around the spool.",
+            "participle": "My friends have wound the string around the spool."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-14",
+      "number": 14,
+      "title": "Cancer Deathmask's Challenge",
+      "description": "Master eight advanced irregular verbs and outsmart Cancer Deathmask.",
+      "theme": "zodiac-knights",
+      "themeLabel": "Zodiac Knights",
+      "villain": "Cancer Deathmask",
+      "villainImage": "assets/lesson-villains/14-zodiac-knights-deathmask.png",
+      "themeColor": "#593c91",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 14: Training Film",
+        "description": "Meet the eight verbs before facing Cancer Deathmask.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-14.png",
+        "transcriptPath": "docs/video-scripts/unit-14.md"
+      },
+      "verbIds": [
+        "bind",
+        "breed",
+        "creep",
+        "deal",
+        "flee",
+        "forgive",
+        "freeze",
+        "grind"
+      ],
+      "openingChallenge": "Fear can break concentration. Keep your courage while these eight verbs change before you.",
+      "closingChallenge": "You faced the challenge without fear. The Battle is your next test!",
+      "verbs": [
+        {
+          "id": "bind",
+          "base": "bind",
+          "past": "bound",
+          "participle": "bound",
+          "meaning": "atar",
+          "difficulty": 4,
+          "examples": {
+            "base": "I bind the pages into a small book.",
+            "past": "Yesterday, I bound the pages into a small book.",
+            "participle": "I have bound the pages into a small book."
+          }
+        },
+        {
+          "id": "breed",
+          "base": "breed",
+          "past": "bred",
+          "participle": "bred",
+          "meaning": "criar",
+          "difficulty": 4,
+          "examples": {
+            "base": "We breed healthy animals on responsible farms.",
+            "past": "Last week, we bred healthy animals on responsible farms.",
+            "participle": "We have bred healthy animals on responsible farms."
+          }
+        },
+        {
+          "id": "creep",
+          "base": "creep",
+          "past": "crept",
+          "participle": "crept",
+          "meaning": "arrastrarse",
+          "difficulty": 4,
+          "examples": {
+            "base": "They creep quietly through the pretend jungle.",
+            "past": "Earlier, they crept quietly through the pretend jungle.",
+            "participle": "They have crept quietly through the pretend jungle."
+          }
+        },
+        {
+          "id": "deal",
+          "base": "deal",
+          "past": "dealt",
+          "participle": "dealt",
+          "meaning": "tratar / repartir",
+          "difficulty": 4,
+          "examples": {
+            "base": "My friends deal cards for the next round.",
+            "past": "Yesterday, my friends dealt cards for the next round.",
+            "participle": "My friends have dealt cards for the next round."
+          }
+        },
+        {
+          "id": "flee",
+          "base": "flee",
+          "past": "fled",
+          "participle": "fled",
+          "meaning": "huir",
+          "difficulty": 4,
+          "examples": {
+            "base": "I flee from danger as quickly as possible.",
+            "past": "Yesterday, I fled from danger as quickly as possible.",
+            "participle": "I have fled from danger as quickly as possible."
+          }
+        },
+        {
+          "id": "forgive",
+          "base": "forgive",
+          "past": "forgave",
+          "participle": "forgiven",
+          "meaning": "perdonar",
+          "difficulty": 4,
+          "examples": {
+            "base": "We forgive friends after honest apologies.",
+            "past": "Last week, we forgave friends after honest apologies.",
+            "participle": "We have forgiven friends after honest apologies."
+          }
+        },
+        {
+          "id": "freeze",
+          "base": "freeze",
+          "past": "froze",
+          "participle": "frozen",
+          "meaning": "congelar",
+          "difficulty": 4,
+          "examples": {
+            "base": "They freeze fruit juice into ice pops.",
+            "past": "Earlier, they froze fruit juice into ice pops.",
+            "participle": "They have frozen fruit juice into ice pops."
+          }
+        },
+        {
+          "id": "grind",
+          "base": "grind",
+          "past": "ground",
+          "participle": "ground",
+          "meaning": "moler",
+          "difficulty": 4,
+          "examples": {
+            "base": "My friends grind corn into flour.",
+            "past": "Yesterday, my friends ground corn into flour.",
+            "participle": "My friends have ground corn into flour."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-15",
+      "number": 15,
+      "title": "Hades's Boss Challenge",
+      "description": "Master eight advanced irregular verbs and outsmart Hades.",
+      "theme": "zodiac-knights",
+      "themeLabel": "Zodiac Knights",
+      "villain": "Hades",
+      "villainImage": "assets/lesson-villains/15-zodiac-knights-hades.png",
+      "themeColor": "#322553",
+      "boss": true,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 15: Training Film",
+        "description": "Meet the eight verbs before facing Hades.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-15.png",
+        "transcriptPath": "docs/video-scripts/unit-15.md"
+      },
+      "verbIds": [
+        "kneel",
+        "lean",
+        "leap",
+        "prove",
+        "quit",
+        "shine",
+        "shoot",
+        "shrink"
+      ],
+      "openingChallenge": "Even heroes tremble before the final darkness. Master every form if you wish to pass.",
+      "closingChallenge": "You resisted the darkness. Now claim victory in the Battle!",
+      "verbs": [
+        {
+          "id": "kneel",
+          "base": "kneel",
+          "past": "knelt",
+          "participle": "knelt",
+          "meaning": "arrodillarse",
+          "difficulty": 5,
+          "examples": {
+            "base": "I kneel beside the garden bed.",
+            "past": "Yesterday, I knelt beside the garden bed.",
+            "participle": "I have knelt beside the garden bed."
+          }
+        },
+        {
+          "id": "lean",
+          "base": "lean",
+          "past": "leaned",
+          "participle": "leaned",
+          "meaning": "inclinarse",
+          "difficulty": 5,
+          "examples": {
+            "base": "We lean against the wall while we wait.",
+            "past": "Last week, we leaned against the wall while we wait.",
+            "participle": "We have leaned against the wall while we wait."
+          }
+        },
+        {
+          "id": "leap",
+          "base": "leap",
+          "past": "leapt",
+          "participle": "leapt",
+          "meaning": "saltar",
+          "difficulty": 5,
+          "examples": {
+            "base": "They leap over small puddles.",
+            "past": "Earlier, they leapt over small puddles.",
+            "participle": "They have leapt over small puddles."
+          }
+        },
+        {
+          "id": "prove",
+          "base": "prove",
+          "past": "proved",
+          "participle": "proven",
+          "meaning": "demostrar",
+          "difficulty": 5,
+          "examples": {
+            "base": "My friends prove our ideas with clear evidence.",
+            "past": "Yesterday, my friends proved our ideas with clear evidence.",
+            "participle": "My friends have proven our ideas with clear evidence."
+          }
+        },
+        {
+          "id": "quit",
+          "base": "quit",
+          "past": "quit",
+          "participle": "quit",
+          "meaning": "dejar / renunciar",
+          "difficulty": 5,
+          "examples": {
+            "base": "I quit games when they stop being safe.",
+            "past": "Yesterday, I quit games when they stop being safe.",
+            "participle": "I have quit games when they stop being safe."
+          }
+        },
+        {
+          "id": "shine",
+          "base": "shine",
+          "past": "shone",
+          "participle": "shone",
+          "meaning": "brillar",
+          "difficulty": 5,
+          "examples": {
+            "base": "We shine brightly after being polished.",
+            "past": "Last week, we shone brightly after being polished.",
+            "participle": "We have shone brightly after being polished."
+          }
+        },
+        {
+          "id": "shoot",
+          "base": "shoot",
+          "past": "shot",
+          "participle": "shot",
+          "meaning": "disparar",
+          "difficulty": 5,
+          "examples": {
+            "base": "They shoot foam arrows at the target.",
+            "past": "Earlier, they shot foam arrows at the target.",
+            "participle": "They have shot foam arrows at the target."
+          }
+        },
+        {
+          "id": "shrink",
+          "base": "shrink",
+          "past": "shrank",
+          "participle": "shrunk",
+          "meaning": "encogerse",
+          "difficulty": 5,
+          "examples": {
+            "base": "My friends shrink wool sweaters in hot water.",
+            "past": "Yesterday, my friends shrank wool sweaters in hot water.",
+            "participle": "My friends have shrunk wool sweaters in hot water."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-16",
+      "number": 16,
+      "title": "Crocodine's Challenge",
+      "description": "Master eight advanced irregular verbs and outsmart Crocodine.",
+      "theme": "dragon-quest-dai",
+      "themeLabel": "Dragon Quest: Dai",
+      "villain": "Crocodine",
+      "villainImage": "assets/lesson-villains/16-dragon-quest-crocodine.png",
+      "themeColor": "#357c53",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 16: Training Film",
+        "description": "Meet the eight verbs before facing Crocodine.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-16.png",
+        "transcriptPath": "docs/video-scripts/unit-16.md"
+      },
+      "verbIds": [
+        "sink",
+        "spill",
+        "spit",
+        "spoil",
+        "swear",
+        "sow",
+        "stride",
+        "strive"
+      ],
+      "openingChallenge": "My strength can split mountains. Can your memory hold together through all eight verbs?",
+      "closingChallenge": "You endured my strength. Now charge into the Battle!",
+      "verbs": [
+        {
+          "id": "sink",
+          "base": "sink",
+          "past": "sank",
+          "participle": "sunk",
+          "meaning": "hundirse",
+          "difficulty": 5,
+          "examples": {
+            "base": "I sink slowly when they fill with water.",
+            "past": "Yesterday, I sank slowly when they fill with water.",
+            "participle": "I have sunk slowly when they fill with water."
+          }
+        },
+        {
+          "id": "spill",
+          "base": "spill",
+          "past": "spilled",
+          "participle": "spilled",
+          "meaning": "derramar",
+          "difficulty": 5,
+          "examples": {
+            "base": "We spill juice when cups tip over.",
+            "past": "Last week, we spilled juice when cups tip over.",
+            "participle": "We have spilled juice when cups tip over."
+          }
+        },
+        {
+          "id": "spit",
+          "base": "spit",
+          "past": "spat",
+          "participle": "spat",
+          "meaning": "escupir",
+          "difficulty": 5,
+          "examples": {
+            "base": "They spit toothpaste into the sink.",
+            "past": "Earlier, they spat toothpaste into the sink.",
+            "participle": "They have spat toothpaste into the sink."
+          }
+        },
+        {
+          "id": "spoil",
+          "base": "spoil",
+          "past": "spoiled",
+          "participle": "spoiled",
+          "meaning": "arruinar",
+          "difficulty": 5,
+          "examples": {
+            "base": "My friends spoil surprises by revealing them early.",
+            "past": "Yesterday, my friends spoiled surprises by revealing them early.",
+            "participle": "My friends have spoiled surprises by revealing them early."
+          }
+        },
+        {
+          "id": "swear",
+          "base": "swear",
+          "past": "swore",
+          "participle": "sworn",
+          "meaning": "jurar",
+          "difficulty": 5,
+          "examples": {
+            "base": "I swear to tell the truth.",
+            "past": "Yesterday, I swore to tell the truth.",
+            "participle": "I have sworn to tell the truth."
+          }
+        },
+        {
+          "id": "sow",
+          "base": "sow",
+          "past": "sowed",
+          "participle": "sown",
+          "meaning": "sembrar",
+          "difficulty": 5,
+          "examples": {
+            "base": "We sow seeds in straight rows.",
+            "past": "Last week, we sowed seeds in straight rows.",
+            "participle": "We have sown seeds in straight rows."
+          }
+        },
+        {
+          "id": "stride",
+          "base": "stride",
+          "past": "strode",
+          "participle": "stridden",
+          "meaning": "andar a grandes pasos",
+          "difficulty": 5,
+          "examples": {
+            "base": "They stride confidently onto the field.",
+            "past": "Earlier, they strode confidently onto the field.",
+            "participle": "They have stridden confidently onto the field."
+          }
+        },
+        {
+          "id": "strive",
+          "base": "strive",
+          "past": "strove",
+          "participle": "striven",
+          "meaning": "esforzarse",
+          "difficulty": 5,
+          "examples": {
+            "base": "My friends strive to improve a little every day.",
+            "past": "Yesterday, my friends strove to improve a little every day.",
+            "participle": "My friends have striven to improve a little every day."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-17",
+      "number": 17,
+      "title": "Hadlar's Challenge",
+      "description": "Master eight advanced irregular verbs and outsmart Hadlar.",
+      "theme": "dragon-quest-dai",
+      "themeLabel": "Dragon Quest: Dai",
+      "villain": "Hadlar",
+      "villainImage": "assets/lesson-villains/17-dragon-quest-hadlar.png",
+      "themeColor": "#a72f2f",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 17: Training Film",
+        "description": "Meet the eight verbs before facing Hadlar.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-17.png",
+        "transcriptPath": "docs/video-scripts/unit-17.md"
+      },
+      "verbIds": [
+        "arise",
+        "awake",
+        "bear",
+        "beat",
+        "behold",
+        "bet",
+        "bid",
+        "burst"
+      ],
+      "openingChallenge": "This is only the beginning of my plan. Master the verbs now, before the real Battle begins!",
+      "closingChallenge": "You interrupted my plan, but the Battle is still ahead!",
+      "verbs": [
+        {
+          "id": "arise",
+          "base": "arise",
+          "past": "arose",
+          "participle": "arisen",
+          "meaning": "surgir",
+          "difficulty": 5,
+          "examples": {
+            "base": "I arise to face unexpected challenges.",
+            "past": "Yesterday, I arose to face unexpected challenges.",
+            "participle": "I have arisen to face unexpected challenges."
+          }
+        },
+        {
+          "id": "awake",
+          "base": "awake",
+          "past": "awoke",
+          "participle": "awoken",
+          "meaning": "despertar",
+          "difficulty": 5,
+          "examples": {
+            "base": "We awake before the alarm on exciting mornings.",
+            "past": "Last week, we awoke before the alarm on exciting mornings.",
+            "participle": "We have awoken before the alarm on exciting mornings."
+          }
+        },
+        {
+          "id": "bear",
+          "base": "bear",
+          "past": "bore",
+          "participle": "borne",
+          "meaning": "soportar",
+          "difficulty": 5,
+          "examples": {
+            "base": "They bear the responsibility together.",
+            "past": "Earlier, they bore the responsibility together.",
+            "participle": "They have borne the responsibility together."
+          }
+        },
+        {
+          "id": "beat",
+          "base": "beat",
+          "past": "beat",
+          "participle": "beaten",
+          "meaning": "vencer / golpear",
+          "difficulty": 5,
+          "examples": {
+            "base": "My friends beat the other team through smart play.",
+            "past": "Yesterday, my friends beat the other team through smart play.",
+            "participle": "My friends have beaten the other team through smart play."
+          }
+        },
+        {
+          "id": "behold",
+          "base": "behold",
+          "past": "beheld",
+          "participle": "beheld",
+          "meaning": "contemplar",
+          "difficulty": 5,
+          "examples": {
+            "base": "I behold the stars from the hilltop.",
+            "past": "Yesterday, I beheld the stars from the hilltop.",
+            "participle": "I have beheld the stars from the hilltop."
+          }
+        },
+        {
+          "id": "bet",
+          "base": "bet",
+          "past": "bet",
+          "participle": "bet",
+          "meaning": "apostar",
+          "difficulty": 5,
+          "examples": {
+            "base": "We bet tokens during friendly games.",
+            "past": "Last week, we bet tokens during friendly games.",
+            "participle": "We have bet tokens during friendly games."
+          }
+        },
+        {
+          "id": "bid",
+          "base": "bid",
+          "past": "bid",
+          "participle": "bid",
+          "meaning": "ofertar",
+          "difficulty": 5,
+          "examples": {
+            "base": "They bid on donated items at the fundraiser.",
+            "past": "Earlier, they bid on donated items at the fundraiser.",
+            "participle": "They have bid on donated items at the fundraiser."
+          }
+        },
+        {
+          "id": "burst",
+          "base": "burst",
+          "past": "burst",
+          "participle": "burst",
+          "meaning": "estallar",
+          "difficulty": 5,
+          "examples": {
+            "base": "My friends burst with excitement after good news.",
+            "past": "Yesterday, my friends burst with excitement after good news.",
+            "participle": "My friends have burst with excitement after good news."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-18",
+      "number": 18,
+      "title": "Vearn's Boss Challenge",
+      "description": "Master eight advanced irregular verbs and outsmart Vearn.",
+      "theme": "dragon-quest-dai",
+      "themeLabel": "Dragon Quest: Dai",
+      "villain": "Vearn",
+      "villainImage": "assets/lesson-villains/18-dragon-quest-vearn.png",
+      "themeColor": "#563585",
+      "boss": true,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 18: Training Film",
+        "description": "Meet the eight verbs before facing Vearn.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-18.png",
+        "transcriptPath": "docs/video-scripts/unit-18.md"
+      },
+      "verbIds": [
+        "cling",
+        "dwell",
+        "fling",
+        "forbid",
+        "lay",
+        "lie",
+        "mistake",
+        "overcome"
+      ],
+      "openingChallenge": "All challenges bend before supreme power. Let us see whether your verb mastery can resist me.",
+      "closingChallenge": "Your knowledge held firm. Complete your trial in the Battle!",
+      "verbs": [
+        {
+          "id": "cling",
+          "base": "cling",
+          "past": "clung",
+          "participle": "clung",
+          "meaning": "aferrarse",
+          "difficulty": 6,
+          "examples": {
+            "base": "I cling to the railing in strong wind.",
+            "past": "Yesterday, I clung to the railing in strong wind.",
+            "participle": "I have clung to the railing in strong wind."
+          }
+        },
+        {
+          "id": "dwell",
+          "base": "dwell",
+          "past": "dwelt",
+          "participle": "dwelt",
+          "meaning": "habitar",
+          "difficulty": 6,
+          "examples": {
+            "base": "We dwell on mistakes for too long.",
+            "past": "Last week, we dwelt on mistakes for too long.",
+            "participle": "We have dwelt on mistakes for too long."
+          }
+        },
+        {
+          "id": "fling",
+          "base": "fling",
+          "past": "flung",
+          "participle": "flung",
+          "meaning": "arrojar",
+          "difficulty": 6,
+          "examples": {
+            "base": "They fling soft rings toward the target.",
+            "past": "Earlier, they flung soft rings toward the target.",
+            "participle": "They have flung soft rings toward the target."
+          }
+        },
+        {
+          "id": "forbid",
+          "base": "forbid",
+          "past": "forbade",
+          "participle": "forbidden",
+          "meaning": "prohibir",
+          "difficulty": 6,
+          "examples": {
+            "base": "My friends forbid dangerous behavior in the laboratory.",
+            "past": "Yesterday, my friends forbade dangerous behavior in the laboratory.",
+            "participle": "My friends have forbidden dangerous behavior in the laboratory."
+          }
+        },
+        {
+          "id": "lay",
+          "base": "lay",
+          "past": "laid",
+          "participle": "laid",
+          "meaning": "colocar",
+          "difficulty": 6,
+          "examples": {
+            "base": "I lay the maps across the table.",
+            "past": "Yesterday, I laid the maps across the table.",
+            "participle": "I have laid the maps across the table."
+          }
+        },
+        {
+          "id": "lie",
+          "base": "lie",
+          "past": "lay",
+          "participle": "lain",
+          "meaning": "recostarse",
+          "difficulty": 6,
+          "examples": {
+            "base": "We lie on the grass and watch the clouds.",
+            "past": "Last week, we lay on the grass and watch the clouds.",
+            "participle": "We have lain on the grass and watch the clouds."
+          }
+        },
+        {
+          "id": "mistake",
+          "base": "mistake",
+          "past": "mistook",
+          "participle": "mistaken",
+          "meaning": "confundir",
+          "difficulty": 6,
+          "examples": {
+            "base": "They mistake one twin for the other.",
+            "past": "Earlier, they mistook one twin for the other.",
+            "participle": "They have mistaken one twin for the other."
+          }
+        },
+        {
+          "id": "overcome",
+          "base": "overcome",
+          "past": "overcame",
+          "participle": "overcome",
+          "meaning": "superar",
+          "difficulty": 6,
+          "examples": {
+            "base": "My friends overcome difficult problems with patience.",
+            "past": "Yesterday, my friends overcame difficult problems with patience.",
+            "participle": "My friends have overcome difficult problems with patience."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-19",
+      "number": 19,
+      "title": "Raditz's Challenge",
+      "description": "Master eight advanced irregular verbs and outsmart Raditz.",
+      "theme": "dragon-ball",
+      "themeLabel": "Dragon Ball",
+      "villain": "Raditz",
+      "villainImage": "assets/lesson-villains/19-dragon-ball-raditz.png",
+      "themeColor": "#557c39",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 19: Training Film",
+        "description": "Meet the eight verbs before facing Raditz.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-19.png",
+        "transcriptPath": "docs/video-scripts/unit-19.md"
+      },
+      "verbIds": [
+        "overtake",
+        "redo",
+        "repay",
+        "retake",
+        "rewrite",
+        "undergo",
+        "undertake",
+        "upset"
+      ],
+      "openingChallenge": "Welcome to the battlefield. If these eight verbs slow you down, you will never reach the next level!",
+      "closingChallenge": "You survived the first attack. The Battle will test your true power!",
+      "verbs": [
+        {
+          "id": "overtake",
+          "base": "overtake",
+          "past": "overtook",
+          "participle": "overtaken",
+          "meaning": "alcanzar / rebasar",
+          "difficulty": 6,
+          "examples": {
+            "base": "I overtake slower runners near the finish.",
+            "past": "Yesterday, I overtook slower runners near the finish.",
+            "participle": "I have overtaken slower runners near the finish."
+          }
+        },
+        {
+          "id": "redo",
+          "base": "redo",
+          "past": "redid",
+          "participle": "redone",
+          "meaning": "rehacer",
+          "difficulty": 6,
+          "examples": {
+            "base": "We redo work that needs careful correction.",
+            "past": "Last week, we redid work that needs careful correction.",
+            "participle": "We have redone work that needs careful correction."
+          }
+        },
+        {
+          "id": "repay",
+          "base": "repay",
+          "past": "repaid",
+          "participle": "repaid",
+          "meaning": "devolver dinero",
+          "difficulty": 6,
+          "examples": {
+            "base": "They repay borrowed money on time.",
+            "past": "Earlier, they repaid borrowed money on time.",
+            "participle": "They have repaid borrowed money on time."
+          }
+        },
+        {
+          "id": "retake",
+          "base": "retake",
+          "past": "retook",
+          "participle": "retaken",
+          "meaning": "retomar",
+          "difficulty": 6,
+          "examples": {
+            "base": "My friends retake photos when the first ones blur.",
+            "past": "Yesterday, my friends retook photos when the first ones blur.",
+            "participle": "My friends have retaken photos when the first ones blur."
+          }
+        },
+        {
+          "id": "rewrite",
+          "base": "rewrite",
+          "past": "rewrote",
+          "participle": "rewritten",
+          "meaning": "reescribir",
+          "difficulty": 6,
+          "examples": {
+            "base": "I rewrite paragraphs to make them clearer.",
+            "past": "Yesterday, I rewrote paragraphs to make them clearer.",
+            "participle": "I have rewritten paragraphs to make them clearer."
+          }
+        },
+        {
+          "id": "undergo",
+          "base": "undergo",
+          "past": "underwent",
+          "participle": "undergone",
+          "meaning": "atravesar",
+          "difficulty": 6,
+          "examples": {
+            "base": "We undergo regular safety inspections.",
+            "past": "Last week, we underwent regular safety inspections.",
+            "participle": "We have undergone regular safety inspections."
+          }
+        },
+        {
+          "id": "undertake",
+          "base": "undertake",
+          "past": "undertook",
+          "participle": "undertaken",
+          "meaning": "emprender",
+          "difficulty": 6,
+          "examples": {
+            "base": "They undertake projects that help our community.",
+            "past": "Earlier, they undertook projects that help our community.",
+            "participle": "They have undertaken projects that help our community."
+          }
+        },
+        {
+          "id": "upset",
+          "base": "upset",
+          "past": "upset",
+          "participle": "upset",
+          "meaning": "alterar / molestar",
+          "difficulty": 6,
+          "examples": {
+            "base": "My friends upset people when we ignore their feelings.",
+            "past": "Yesterday, my friends upset people when we ignore their feelings.",
+            "participle": "My friends have upset people when we ignore their feelings."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-20",
+      "number": 20,
+      "title": "Frieza's Challenge",
+      "description": "Master eight advanced irregular verbs and outsmart Frieza.",
+      "theme": "dragon-ball",
+      "themeLabel": "Dragon Ball",
+      "villain": "Frieza",
+      "villainImage": "assets/lesson-villains/20-dragon-ball-frieza.png",
+      "themeColor": "#7651ad",
+      "boss": false,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 20: Training Film",
+        "description": "Meet the eight verbs before facing Frieza.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-20.png",
+        "transcriptPath": "docs/video-scripts/unit-20.md"
+      },
+      "verbIds": [
+        "weave",
+        "withdraw",
+        "withstand",
+        "foresee",
+        "foretell",
+        "mislead",
+        "misunderstand",
+        "outgrow"
+      ],
+      "openingChallenge": "Your training means nothing against perfect power. Master these forms before time runs out!",
+      "closingChallenge": "You exceeded my expectations. Now test that power in the Battle!",
+      "verbs": [
+        {
+          "id": "weave",
+          "base": "weave",
+          "past": "wove",
+          "participle": "woven",
+          "meaning": "tejer",
+          "difficulty": 6,
+          "examples": {
+            "base": "I weave colorful strips into baskets.",
+            "past": "Yesterday, I wove colorful strips into baskets.",
+            "participle": "I have woven colorful strips into baskets."
+          }
+        },
+        {
+          "id": "withdraw",
+          "base": "withdraw",
+          "past": "withdrew",
+          "participle": "withdrawn",
+          "meaning": "retirar",
+          "difficulty": 6,
+          "examples": {
+            "base": "We withdraw money only with permission.",
+            "past": "Last week, we withdrew money only with permission.",
+            "participle": "We have withdrawn money only with permission."
+          }
+        },
+        {
+          "id": "withstand",
+          "base": "withstand",
+          "past": "withstood",
+          "participle": "withstood",
+          "meaning": "resistir",
+          "difficulty": 6,
+          "examples": {
+            "base": "They withstand heavy rain and strong wind.",
+            "past": "Earlier, they withstood heavy rain and strong wind.",
+            "participle": "They have withstood heavy rain and strong wind."
+          }
+        },
+        {
+          "id": "foresee",
+          "base": "foresee",
+          "past": "foresaw",
+          "participle": "foreseen",
+          "meaning": "prever",
+          "difficulty": 6,
+          "examples": {
+            "base": "My friends foresee problems before they grow.",
+            "past": "Yesterday, my friends foresaw problems before they grow.",
+            "participle": "My friends have foreseen problems before they grow."
+          }
+        },
+        {
+          "id": "foretell",
+          "base": "foretell",
+          "past": "foretold",
+          "participle": "foretold",
+          "meaning": "predecir",
+          "difficulty": 6,
+          "examples": {
+            "base": "I foretell events in imaginative stories.",
+            "past": "Yesterday, I foretold events in imaginative stories.",
+            "participle": "I have foretold events in imaginative stories."
+          }
+        },
+        {
+          "id": "mislead",
+          "base": "mislead",
+          "past": "misled",
+          "participle": "misled",
+          "meaning": "engañar",
+          "difficulty": 6,
+          "examples": {
+            "base": "We mislead readers with incomplete information.",
+            "past": "Last week, we misled readers with incomplete information.",
+            "participle": "We have misled readers with incomplete information."
+          }
+        },
+        {
+          "id": "misunderstand",
+          "base": "misunderstand",
+          "past": "misunderstood",
+          "participle": "misunderstood",
+          "meaning": "malinterpretar",
+          "difficulty": 6,
+          "examples": {
+            "base": "They misunderstand directions when we do not listen.",
+            "past": "Earlier, they misunderstood directions when we do not listen.",
+            "participle": "They have misunderstood directions when we do not listen."
+          }
+        },
+        {
+          "id": "outgrow",
+          "base": "outgrow",
+          "past": "outgrew",
+          "participle": "outgrown",
+          "meaning": "superar al crecer",
+          "difficulty": 6,
+          "examples": {
+            "base": "My friends outgrow clothes as we get taller.",
+            "past": "Yesterday, my friends outgrew clothes as we get taller.",
+            "participle": "My friends have outgrown clothes as we get taller."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lesson-21",
+      "number": 21,
+      "title": "Majin Buu's Boss Challenge",
+      "description": "Master eight advanced irregular verbs and outsmart Majin Buu.",
+      "theme": "dragon-ball",
+      "themeLabel": "Dragon Ball",
+      "villain": "Majin Buu",
+      "villainImage": "assets/lesson-villains/21-dragon-ball-majin-buu.png",
+      "themeColor": "#d95391",
+      "boss": true,
+      "video": {
+        "provider": "dropbox",
+        "title": "Lesson 21: Training Film",
+        "description": "Meet the eight verbs before facing Majin Buu.",
+        "shareUrl": "",
+        "posterPath": "assets/video-posters/unit-21.png",
+        "transcriptPath": "docs/video-scripts/unit-21.md"
+      },
+      "verbIds": [
+        "overthrow",
+        "oversleep",
+        "overdo",
+        "offset",
+        "partake",
+        "preset",
+        "rebuild",
+        "remake"
+      ],
+      "openingChallenge": "I turn order into chaos! Keep every verb form straight, or this lesson becomes mine!",
+      "closingChallenge": "You brought order back to the verbs. Finish with the Battle!",
+      "verbs": [
+        {
+          "id": "overthrow",
+          "base": "overthrow",
+          "past": "overthrew",
+          "participle": "overthrown",
+          "meaning": "derrocar",
+          "difficulty": 7,
+          "examples": {
+            "base": "I overthrow unfair rulers in history stories.",
+            "past": "Yesterday, I overthrew unfair rulers in history stories.",
+            "participle": "I have overthrown unfair rulers in history stories."
+          }
+        },
+        {
+          "id": "oversleep",
+          "base": "oversleep",
+          "past": "overslept",
+          "participle": "overslept",
+          "meaning": "dormirse de más",
+          "difficulty": 7,
+          "examples": {
+            "base": "We oversleep when alarms are turned off.",
+            "past": "Last week, we overslept when alarms are turned off.",
+            "participle": "We have overslept when alarms are turned off."
+          }
+        },
+        {
+          "id": "overdo",
+          "base": "overdo",
+          "past": "overdid",
+          "participle": "overdone",
+          "meaning": "exagerar",
+          "difficulty": 7,
+          "examples": {
+            "base": "They overdo exercise when we ignore our limits.",
+            "past": "Earlier, they overdid exercise when we ignore our limits.",
+            "participle": "They have overdone exercise when we ignore our limits."
+          }
+        },
+        {
+          "id": "offset",
+          "base": "offset",
+          "past": "offset",
+          "participle": "offset",
+          "meaning": "compensar",
+          "difficulty": 7,
+          "examples": {
+            "base": "My friends offset costs by saving energy.",
+            "past": "Yesterday, my friends offset costs by saving energy.",
+            "participle": "My friends have offset costs by saving energy."
+          }
+        },
+        {
+          "id": "partake",
+          "base": "partake",
+          "past": "partook",
+          "participle": "partaken",
+          "meaning": "participar",
+          "difficulty": 7,
+          "examples": {
+            "base": "I partake in the celebration together.",
+            "past": "Yesterday, I partook in the celebration together.",
+            "participle": "I have partaken in the celebration together."
+          }
+        },
+        {
+          "id": "preset",
+          "base": "preset",
+          "past": "preset",
+          "participle": "preset",
+          "meaning": "preconfigurar",
+          "difficulty": 7,
+          "examples": {
+            "base": "We preset the timer before baking.",
+            "past": "Last week, we preset the timer before baking.",
+            "participle": "We have preset the timer before baking."
+          }
+        },
+        {
+          "id": "rebuild",
+          "base": "rebuild",
+          "past": "rebuilt",
+          "participle": "rebuilt",
+          "meaning": "reconstruir",
+          "difficulty": 7,
+          "examples": {
+            "base": "They rebuild structures after the storm.",
+            "past": "Earlier, they rebuilt structures after the storm.",
+            "participle": "They have rebuilt structures after the storm."
+          }
+        },
+        {
+          "id": "remake",
+          "base": "remake",
+          "past": "remade",
+          "participle": "remade",
+          "meaning": "volver a hacer",
+          "difficulty": 7,
+          "examples": {
+            "base": "My friends remake old objects into something useful.",
+            "past": "Yesterday, my friends remade old objects into something useful.",
+            "participle": "My friends have remade old objects into something useful."
+          }
+        }
+      ]
+    }
+  ]
+}

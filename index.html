@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14213d">
+  <meta name="description" content="Verb Buster League — train and master irregular English verbs.">
+  <title>Verb Buster League</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Black+Han+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/character-images.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Verb Buster League home">
+      <span class="brand-mark" aria-hidden="true">VB</span>
+      <span><strong>VERB BUSTER</strong><small>LEAGUE</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span aria-hidden="true">☰</span><span class="sr-only">Open navigation</span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="#home" data-route-link="home">League HQ</a>
+      <a href="#training" data-route-link="training">Training Zone</a>
+      <a href="#scoreboard" data-route-link="scoreboard">Scoreboard</a>
+      <a href="#trophy" data-route-link="trophy">Trophy Room</a>
+      <a href="#profile" data-route-link="profile">Player</a>
+      <button class="sound-button" type="button" aria-label="Sound is off" title="Audio controls coming soon">♪ Off</button>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer>
+    <p>Verb Buster League · Progress stays on this device.</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

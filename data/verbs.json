@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "units": [
+    {
+      "id": "everyday-actions",
+      "number": 1,
+      "title": "Everyday Actions",
+      "description": "Eight powerhouse verbs you use every day.",
+      "theme": "pj-masks",
+      "video": {
+        "provider": "dropbox",
+        "title": "Everyday Actions: Training Film",
+        "description": "Meet the eight verbs before stepping onto the field.",
+        "shareUrl": "",
+        "posterPath": "",
+        "transcriptPath": "docs/video-scripts/unit-01.md"
+      },
+      "verbIds": ["go", "come", "do", "make", "get", "have", "take", "give"]
+    },
+    {
+      "id": "school-day",
+      "number": 2,
+      "title": "School Day",
+      "description": "Eight classroom verbs for stories, questions and big ideas.",
+      "theme": "paw-patrol",
+      "video": {
+        "provider": "dropbox",
+        "title": "School Day: Training Film",
+        "description": "Meet the classroom team before the next Verb Battle.",
+        "shareUrl": "",
+        "posterPath": "",
+        "transcriptPath": "docs/video-scripts/unit-02.md"
+      },
+      "verbIds": ["read", "write", "speak", "say", "tell", "teach", "know", "think"]
+    },
+    {
+      "id": "food-and-drinks", "number": 3, "title": "Food and Drinks",
+      "description": "Eight useful verbs for meals, choices and sharing.", "theme": "avatar",
+      "video": {"provider": "dropbox", "title": "Food and Drinks: Training Film", "description": "Meet the kitchen team before the next Verb Battle.", "shareUrl": "", "posterPath": "", "transcriptPath": "docs/video-scripts/unit-03.md"},
+      "verbIds": ["eat", "drink", "buy", "bring", "choose", "cut", "feed", "pay"]
+    },
+    {
+      "id": "movement-adventure", "number": 4, "title": "Movement and Adventure",
+      "description": "Eight action verbs for journeys, sports and exploration.", "theme": "harry-potter",
+      "video": {"provider": "dropbox", "title": "Movement and Adventure: Training Film", "description": "Warm up with eight movement verbs.", "shareUrl": "", "posterPath": "", "transcriptPath": "docs/video-scripts/unit-04.md"},
+      "verbIds": ["run", "ride", "drive", "fly", "swim", "fall", "leave", "become"]
+    },
+    {
+      "id": "senses-and-ideas", "number": 5, "title": "Senses and Ideas",
+      "description": "Eight verbs for noticing, remembering and understanding.", "theme": "dragon-ball",
+      "video": {"provider": "dropbox", "title": "Senses and Ideas: Training Film", "description": "Train the verbs that power thoughts and discoveries.", "shareUrl": "", "posterPath": "", "transcriptPath": "docs/video-scripts/unit-05.md"},
+      "verbIds": ["see", "hear", "find", "forget", "understand", "feel", "keep", "hold"]
+    }
+  ],
+  "verbs": [
+    {
+      "id": "go", "base": "go", "past": "went", "participle": "gone", "meaning": "ir", "difficulty": 1,
+      "examples": {"base": "I go to school every day.", "past": "We went to the park yesterday.", "participle": "She has gone home."}
+    },
+    {
+      "id": "come", "base": "come", "past": "came", "participle": "come", "meaning": "venir", "difficulty": 1,
+      "examples": {"base": "They come to practice early.", "past": "My friend came to my house.", "participle": "Dad has come back."}
+    },
+    {
+      "id": "do", "base": "do", "past": "did", "participle": "done", "meaning": "hacer", "difficulty": 1,
+      "examples": {"base": "I do my homework after school.", "past": "Leo did a great job.", "participle": "We have done the exercise."}
+    },
+    {
+      "id": "make", "base": "make", "past": "made", "participle": "made", "meaning": "hacer / crear", "difficulty": 1,
+      "examples": {"base": "We make sandwiches for lunch.", "past": "Mia made a paper airplane.", "participle": "They have made a plan."}
+    },
+    {
+      "id": "get", "base": "get", "past": "got", "participle": "gotten", "acceptedParticiples": ["got"], "meaning": "obtener / llegar", "difficulty": 2,
+      "note": "American English usually uses gotten. British English often uses got.",
+      "examples": {"base": "I get ready at seven.", "past": "Sam got a new backpack.", "participle": "She has gotten stronger."}
+    },
+    {
+      "id": "have", "base": "have", "past": "had", "participle": "had", "meaning": "tener", "difficulty": 1,
+      "examples": {"base": "We have art class today.", "past": "I had cereal for breakfast.", "participle": "They have had enough time."}
+    },
+    {
+      "id": "take", "base": "take", "past": "took", "participle": "taken", "meaning": "tomar / llevar", "difficulty": 2,
+      "examples": {"base": "I take the bus to school.", "past": "Nora took a funny photo.", "participle": "He has taken his notebook."}
+    },
+    {
+      "id": "give", "base": "give", "past": "gave", "participle": "given", "meaning": "dar", "difficulty": 2,
+      "examples": {"base": "I give my dog fresh water.", "past": "Our coach gave us a tip.", "participle": "She has given me a clue."}
+    },
+    {
+      "id": "read", "base": "read", "past": "read", "participle": "read", "meaning": "leer", "difficulty": 2,
+      "note": "The spelling stays the same, but the past form sounds like “red.”",
+      "examples": {"base": "I read a chapter every night.", "past": "We read a funny story yesterday.", "participle": "She has read that book twice."}
+    },
+    {
+      "id": "write", "base": "write", "past": "wrote", "participle": "written", "meaning": "escribir", "difficulty": 2,
+      "examples": {"base": "I write my name on the page.", "past": "Noah wrote a short poem.", "participle": "We have written three sentences."}
+    },
+    {
+      "id": "speak", "base": "speak", "past": "spoke", "participle": "spoken", "meaning": "hablar", "difficulty": 2,
+      "examples": {"base": "We speak English in class.", "past": "Maya spoke to the teacher.", "participle": "He has spoken clearly."}
+    },
+    {
+      "id": "say", "base": "say", "past": "said", "participle": "said", "meaning": "decir", "difficulty": 2,
+      "examples": {"base": "I say hello to my friends.", "past": "Our teacher said good morning.", "participle": "They have said the answer."}
+    },
+    {
+      "id": "tell", "base": "tell", "past": "told", "participle": "told", "meaning": "decir / contar", "difficulty": 2,
+      "examples": {"base": "I tell my class a story.", "past": "Liam told us the news.", "participle": "She has told the truth."}
+    },
+    {
+      "id": "teach", "base": "teach", "past": "taught", "participle": "taught", "meaning": "enseñar", "difficulty": 3,
+      "examples": {"base": "They teach science at our school.", "past": "Mr. Lee taught us about space.", "participle": "She has taught this lesson before."}
+    },
+    {
+      "id": "know", "base": "know", "past": "knew", "participle": "known", "meaning": "saber / conocer", "difficulty": 2,
+      "examples": {"base": "I know the answer.", "past": "Ava knew every word.", "participle": "We have known each other for years."}
+    },
+    {
+      "id": "think", "base": "think", "past": "thought", "participle": "thought", "meaning": "pensar", "difficulty": 3,
+      "examples": {"base": "I think about the question.", "past": "Ben thought of a clever idea.", "participle": "They have thought about the problem."}
+    },
+    {"id":"eat","base":"eat","past":"ate","participle":"eaten","meaning":"comer","difficulty":1,"examples":{"base":"We eat lunch at noon.","past":"I ate an apple yesterday.","participle":"She has eaten her sandwich."}},
+    {"id":"drink","base":"drink","past":"drank","participle":"drunk","meaning":"beber","difficulty":2,"examples":{"base":"I drink water after practice.","past":"Leo drank some milk.","participle":"We have drunk enough water."}},
+    {"id":"buy","base":"buy","past":"bought","participle":"bought","meaning":"comprar","difficulty":2,"examples":{"base":"They buy fruit at the market.","past":"Mom bought fresh bread.","participle":"I have bought a snack."}},
+    {"id":"bring","base":"bring","past":"brought","participle":"brought","meaning":"traer","difficulty":2,"examples":{"base":"I bring my lunch to school.","past":"Ana brought orange juice.","participle":"He has brought the plates."}},
+    {"id":"choose","base":"choose","past":"chose","participle":"chosen","meaning":"elegir","difficulty":3,"examples":{"base":"We choose a healthy snack.","past":"Sam chose the red apple.","participle":"They have chosen the menu."}},
+    {"id":"cut","base":"cut","past":"cut","participle":"cut","meaning":"cortar","difficulty":1,"examples":{"base":"I cut the sandwich in half.","past":"Dad cut the watermelon.","participle":"She has cut the carrots."}},
+    {"id":"feed","base":"feed","past":"fed","participle":"fed","meaning":"alimentar","difficulty":2,"examples":{"base":"We feed the dog every morning.","past":"I fed the fish yesterday.","participle":"They have fed the birds."}},
+    {"id":"pay","base":"pay","past":"paid","participle":"paid","meaning":"pagar","difficulty":2,"examples":{"base":"We pay for our groceries.","past":"Dad paid for dinner.","participle":"She has paid the bill."}},
+    {"id":"run","base":"run","past":"ran","participle":"run","meaning":"correr","difficulty":1,"examples":{"base":"I run around the track.","past":"We ran to the finish line.","participle":"He has run five laps."}},
+    {"id":"ride","base":"ride","past":"rode","participle":"ridden","meaning":"montar","difficulty":2,"examples":{"base":"I ride my bike after school.","past":"Ella rode a horse yesterday.","participle":"We have ridden that trail."}},
+    {"id":"drive","base":"drive","past":"drove","participle":"driven","meaning":"conducir","difficulty":2,"examples":{"base":"My parents drive to work.","past":"Dad drove us to the park.","participle":"She has driven this road before."}},
+    {"id":"fly","base":"fly","past":"flew","participle":"flown","meaning":"volar","difficulty":2,"examples":{"base":"Birds fly over the trees.","past":"The kite flew very high.","participle":"We have flown in an airplane."}},
+    {"id":"swim","base":"swim","past":"swam","participle":"swum","meaning":"nadar","difficulty":3,"examples":{"base":"I swim every Saturday.","past":"They swam across the pool.","participle":"She has swum in the ocean."}},
+    {"id":"fall","base":"fall","past":"fell","participle":"fallen","meaning":"caer","difficulty":2,"examples":{"base":"Leaves fall from the trees.","past":"The ball fell off the table.","participle":"Snow has fallen all night."}},
+    {"id":"leave","base":"leave","past":"left","participle":"left","meaning":"salir / dejar","difficulty":2,"examples":{"base":"We leave home at eight.","past":"The bus left early.","participle":"They have left the building."}},
+    {"id":"become","base":"become","past":"became","participle":"become","meaning":"convertirse","difficulty":3,"examples":{"base":"Caterpillars become butterflies.","past":"The day became warmer.","participle":"She has become a strong swimmer."}},
+    {"id":"see","base":"see","past":"saw","participle":"seen","meaning":"ver","difficulty":1,"examples":{"base":"I see a bird outside.","past":"We saw a rainbow yesterday.","participle":"He has seen that movie."}},
+    {"id":"hear","base":"hear","past":"heard","participle":"heard","meaning":"oír","difficulty":2,"examples":{"base":"I hear music downstairs.","past":"Mia heard a strange sound.","participle":"They have heard the news."}},
+    {"id":"find","base":"find","past":"found","participle":"found","meaning":"encontrar","difficulty":2,"examples":{"base":"We find clues in the story.","past":"I found my missing pencil.","participle":"She has found the answer."}},
+    {"id":"forget","base":"forget","past":"forgot","participle":"forgotten","meaning":"olvidar","difficulty":3,"examples":{"base":"I sometimes forget my keys.","past":"Ben forgot his homework.","participle":"We have forgotten the password."}},
+    {"id":"understand","base":"understand","past":"understood","participle":"understood","meaning":"entender","difficulty":3,"examples":{"base":"I understand the instructions.","past":"They understood the question.","participle":"She has understood the lesson."}},
+    {"id":"feel","base":"feel","past":"felt","participle":"felt","meaning":"sentir","difficulty":2,"examples":{"base":"I feel happy today.","past":"We felt cold outside.","participle":"He has felt much better."}},
+    {"id":"keep","base":"keep","past":"kept","participle":"kept","meaning":"guardar / mantener","difficulty":2,"examples":{"base":"I keep my notes in a folder.","past":"She kept the secret.","participle":"We have kept our promise."}},
+    {"id":"hold","base":"hold","past":"held","participle":"held","meaning":"sostener","difficulty":2,"examples":{"base":"I hold the door open.","past":"Max held the trophy.","participle":"She has held the record for years."}}
+  ]
+}

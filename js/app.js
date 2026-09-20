@@ -1,7 +1,7 @@
 import { loadContent, getUnitWithVerbs } from './data.js';
 import { renderVideoCard, activateVideoFallback } from './video-player.js';
 import { generateBattle, generateAdaptiveBattle, isCorrectAnswer } from './question-generator.js';
-import { loadProgress, recordBattle, masteryFor, progressSummary, resetProgress, isUnitUnlocked, hasCompletedLeague } from './progress.js';
+import { loadProgress, recordBattle, progressSummary, resetProgress, isUnitUnlocked, hasCompletedLeague } from './progress.js';
 import { loadWeeklyPoints, awardQuestion, recordWeeklyBattle, weeklyPercent, resetWeeklyPoints, ensureWeeklyReviewUnits } from './weekly-points.js';
 import { loadProfile, saveProfile, avatarSvg } from './profile.js';
 import { loadCertificateDefinitions, loadCertificates, refreshAwardDefinitions, ensureWeeklyCertificate, syncCurrentAwardProfile, resetCertificates } from './certificates.js';
@@ -170,7 +170,7 @@ function createBattleState(unit, mode = 'standard', data = null) {
     battleVerbs = [...unit.verbs, ...reviewVerbs];
   }
   const questions = mode === 'personal'
-    ? generateAdaptiveBattle(battleVerbs, (verbId, skill) => masteryFor(progress, verbId, skill))
+    ? generateAdaptiveBattle(battleVerbs, (verbId, skill) => progress.verbs?.[verbId]?.skills?.[skill])
     : reviewVerbs.length
       ? [...generateBattle(unit.verbs).slice(0, 16), ...generateBattle(reviewVerbs).sort(() => Math.random() - 0.5).slice(0, 4)].sort(() => Math.random() - 0.5)
       : generateBattle(unit.verbs);

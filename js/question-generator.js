@@ -63,20 +63,77 @@ export function generateBattle(verbs) {
   return shuffle([...choices, ...writing]);
 }
 
-export function generateAdaptiveBattle(verbs, masteryLookup) {
-  const remaining = generateQuestionPool(verbs).map((question) => ({
-    question,
-    weight: 1 + (100 - masteryLookup(question.verbId, question.skill)) / 18 + Math.random()
-  }));
-  const selected = [];
-  while (selected.length < 20 && remaining.length) {
-    remaining.sort((a, b) => b.weight - a.weight);
-    const candidates = remaining.slice(0, Math.min(6, remaining.length));
-    const pick = candidates[Math.floor(Math.random() * candidates.length)];
-    selected.push(pick.question);
-    remaining.splice(remaining.indexOf(pick), 1);
+function takeVaried(candidates, count, selectedIds, maxPerVerb) {
+  const picked = [];
+  const perVerb = new Map();
+  const available = candidates.filter(({ question }) => !selectedIds.has(question.id));
+  for (const candidate of available) {
+    if (picked.length >= count) break;
+    const uses = perVerb.get(candidate.question.verbId) || 0;
+    if (uses >= maxPerVerb) continue;
+    picked.push(candidate);
+    perVerb.set(candidate.question.verbId, uses + 1);
+    selectedIds.add(candidate.question.id);
   }
-  return shuffle(selected);
+  if (picked.length < count) {
+    for (const candidate of available) {
+      if (picked.length >= count) break;
+      if (selectedIds.has(candidate.question.id)) continue;
+      picked.push(candidate);
+      selectedIds.add(candidate.question.id);
+    }
+  }
+  return picked;
+}
+
+export function generateAdaptiveBattle(verbs, progressLookup) {
+  const candidates = generateQuestionPool(verbs).map((question) => {
+    const record = progressLookup(question.verbId, question.skill) || {};
+    const attempts = record.attempts || 0;
+    const correct = record.correct || 0;
+    return {
+      question,
+      attempts,
+      mistakes: Math.max(0, attempts - correct),
+      errorRate: attempts ? Math.max(0, attempts - correct) / attempts : 0,
+      mastery: record.mastery || 0,
+      lastPracticed: record.lastPracticed ? Date.parse(record.lastPracticed) || 0 : 0,
+      tieBreaker: Math.random()
+    };
+  });
+  const selectedIds = new Set();
+  const verbLastPracticed = new Map();
+  candidates.forEach((candidate) => {
+    verbLastPracticed.set(candidate.question.verbId, Math.max(
+      verbLastPracticed.get(candidate.question.verbId) || 0,
+      candidate.lastPracticed
+    ));
+  });
+
+  const weaknessOrder = [...candidates].sort((a, b) =>
+    b.mistakes - a.mistakes
+    || b.errorRate - a.errorRate
+    || a.mastery - b.mastery
+    || b.attempts - a.attempts
+    || b.tieBreaker - a.tieBreaker
+  );
+  const weak = takeVaried(weaknessOrder, 10, selectedIds, 2)
+    .map(({ question }) => ({ ...question, trainingReason: 'weakness' }));
+
+  const staleOrder = [...candidates].sort((a, b) =>
+    verbLastPracticed.get(a.question.verbId) - verbLastPracticed.get(b.question.verbId)
+    || a.lastPracticed - b.lastPracticed
+    || a.mastery - b.mastery
+    || b.tieBreaker - a.tieBreaker
+  );
+  const stale = takeVaried(staleOrder, 6, selectedIds, 1)
+    .map(({ question }) => ({ ...question, trainingReason: 'stale' }));
+
+  const randomOrder = shuffle(candidates.filter(({ question }) => !selectedIds.has(question.id)));
+  const random = takeVaried(randomOrder, 4, selectedIds, 1)
+    .map(({ question }) => ({ ...question, trainingReason: 'random' }));
+
+  return shuffle([...weak, ...stale, ...random]);
 }
 
 export function isCorrectAnswer(question, value) {

@@ -77,7 +77,14 @@ export function recordBattle(progress, answers, storage = globalThis.localStorag
   return updated;
 }
 
-export function isUnitUnlocked(progress, units, unitIndex) {
+export function hasCompletedLeague(progress, units) {
+  return units.length > 0 && units.every((unit) => (progress.units?.[unit.id]?.bestScore || 0) >= 17);
+}
+
+export function isUnitUnlocked(progress, units, unitIndex, reviewUnitIds = []) {
+  if (hasCompletedLeague(progress, units) && reviewUnitIds.length) {
+    return reviewUnitIds.includes(units[unitIndex]?.id);
+  }
   const qualified = (index) => {
     const unitProgress = progress.units?.[units[index]?.id];
     return (unitProgress?.bestScore || 0) >= 17;

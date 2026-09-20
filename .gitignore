@@ -9,3 +9,7 @@ tests/
 videos/build-*/
 videos/*.mp4
 .agents/
+growth_animation/
+outputs/
+scripts/build_pemex_ratio_workbook.mjs
+scripts/node_modules/

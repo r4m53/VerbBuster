@@ -11,7 +11,45 @@ export function weekKey(date = new Date()) {
 }
 
 function freshWeek(key) {
-  return { version: 1, weekKey: key, points: 0, questions: {}, battlesCompleted: 0, history: [] };
+  return { version: 1, weekKey: key, points: 0, questions: {}, battlesCompleted: 0, reviewUnitIds: [], history: [] };
+}
+
+function seededNumber(value) {
+  let hash = 2166136261;
+  for (const character of value) {
+    hash ^= character.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function seededShuffle(items, seed) {
+  const shuffled = [...items];
+  let state = seededNumber(seed) || 1;
+  const random = () => {
+    state = (Math.imul(state, 1664525) + 1013904223) >>> 0;
+    return state / 4294967296;
+  };
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+}
+
+export function ensureWeeklyReviewUnits(weekly, eligibleUnitIds, storage = globalThis.localStorage) {
+  if (eligibleUnitIds.length < 2) return weekly;
+  const validSelection = weekly.reviewUnitIds?.length === 2
+    && weekly.reviewUnitIds.every((unitId) => eligibleUnitIds.includes(unitId));
+  if (validSelection) return weekly;
+
+  const previousIds = weekly.history?.at(-1)?.reviewUnitIds || [];
+  let candidates = eligibleUnitIds.filter((unitId) => !previousIds.includes(unitId));
+  if (candidates.length < 2) candidates = [...eligibleUnitIds];
+  const reviewUnitIds = seededShuffle(candidates, `${weekly.weekKey}:${eligibleUnitIds.join('|')}`).slice(0, 2);
+  const updated = { ...weekly, reviewUnitIds };
+  saveWeeklyPoints(updated, storage);
+  return updated;
 }
 
 export function loadWeeklyPoints(storage = globalThis.localStorage, now = new Date()) {
@@ -26,7 +64,8 @@ export function loadWeeklyPoints(storage = globalThis.localStorage, now = new Da
       weekKey: saved.weekKey,
       points: saved.points,
       battlesCompleted: saved.battlesCompleted || 0,
-      questionsPracticed: Object.keys(saved.questions || {}).length
+      questionsPracticed: Object.keys(saved.questions || {}).length,
+      reviewUnitIds: saved.reviewUnitIds || []
     }].slice(-12);
     const next = { ...freshWeek(currentKey), history };
     saveWeeklyPoints(next, storage);

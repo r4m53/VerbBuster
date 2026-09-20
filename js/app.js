@@ -1,8 +1,8 @@
 import { loadContent, getUnitWithVerbs } from './data.js';
 import { renderVideoCard, activateVideoFallback } from './video-player.js';
 import { generateBattle, generateAdaptiveBattle, isCorrectAnswer } from './question-generator.js';
-import { loadProgress, recordBattle, masteryFor, progressSummary, resetProgress, isUnitUnlocked } from './progress.js';
-import { loadWeeklyPoints, awardQuestion, recordWeeklyBattle, weeklyPercent, resetWeeklyPoints } from './weekly-points.js';
+import { loadProgress, recordBattle, masteryFor, progressSummary, resetProgress, isUnitUnlocked, hasCompletedLeague } from './progress.js';
+import { loadWeeklyPoints, awardQuestion, recordWeeklyBattle, weeklyPercent, resetWeeklyPoints, ensureWeeklyReviewUnits } from './weekly-points.js';
 import { loadProfile, saveProfile, avatarSvg } from './profile.js';
 import { loadCertificateDefinitions, loadCertificates, refreshAwardDefinitions, ensureWeeklyCertificate, syncCurrentAwardProfile, resetCertificates } from './certificates.js';
 import { downloadCertificate } from './certificate-image.js';
@@ -55,6 +55,9 @@ async function renderRoute() {
   });
   try {
     const data = await loadContent();
+    const weeklyReviewActive = hasCompletedLeague(progress, data.units);
+    if (weeklyReviewActive) weekly = ensureWeeklyReviewUnits(weekly, data.units.map((unit) => unit.id));
+    const unitIsUnlocked = (index) => isUnitUnlocked(progress, data.units, index, weeklyReviewActive ? weekly.reviewUnitIds : []);
     certificateDefinitions ||= await loadCertificateDefinitions();
     certificateCollection = refreshAwardDefinitions(certificateCollection, certificateDefinitions);
     const certificateCheck = ensureWeeklyCertificate(certificateCollection, weekly, playerProfile, certificateDefinitions);
@@ -63,26 +66,26 @@ async function renderRoute() {
     const unitId = requestedUnitId || data.units[0].id;
     const unitIndex = data.units.findIndex((item) => item.id === unitId);
     const unit = getUnitWithVerbs(data, unitId) || getUnitWithVerbs(data, data.units[0].id);
-    const unlocked = isUnitUnlocked(progress, data.units, Math.max(0, unitIndex));
+    const unlocked = unitIsUnlocked(Math.max(0, unitIndex));
     if (route === 'training' && !requestedUnitId) {
       const availableUnits = data.units
-        .map((item, index) => ({ ...getUnitWithVerbs(data, item.id), unlocked: parentPreview || isUnitUnlocked(progress, data.units, index) }))
+        .map((item, index) => ({ ...getUnitWithVerbs(data, item.id), unlocked: parentPreview || unitIsUnlocked(index) }))
         .filter((item) => item.unlocked);
-      app.innerHTML = trainingHubView(availableUnits, parentPreview);
+      app.innerHTML = trainingHubView(availableUnits, parentPreview, weeklyReviewActive);
     }
-    else if (route === 'training') app.innerHTML = (unlocked || parentPreview) ? trainingView(unit, parentPreview) : lockedUnitView(unit, data.units[unitIndex - 1]);
+    else if (route === 'training') app.innerHTML = (unlocked || parentPreview) ? trainingView(unit, parentPreview) : weeklyReviewActive ? weeklyReplayLockedView(unit) : lockedUnitView(unit, data.units[unitIndex - 1]);
     else if (route === 'battle' || route === 'personal') {
-      if (route !== 'personal' && !unlocked) app.innerHTML = lockedUnitView(unit, data.units[unitIndex - 1]);
+      if (route !== 'personal' && !unlocked) app.innerHTML = weeklyReviewActive ? weeklyReplayLockedView(unit) : lockedUnitView(unit, data.units[unitIndex - 1]);
       else {
         if (!battle || battle.unitId !== unit.id) battle = createBattleState(unit, route === 'personal' ? 'personal' : 'standard', data);
         app.innerHTML = battleView(battle);
       }
-    } else if (route === 'scoreboard') app.innerHTML = scoreboardView(progress, data.verbs, data.units);
+    } else if (route === 'scoreboard') app.innerHTML = scoreboardView(progress, data.verbs, data.units, weeklyReviewActive ? weekly.reviewUnitIds : []);
     else if (route === 'profile') app.innerHTML = profileView(playerProfile);
     else if (route === 'trophy') app.innerHTML = trophyRoomView(certificateCollection, certificateDefinitions);
     else if (route === 'certificate') app.innerHTML = certificateDetailView(certificateCollection.awards.find((award) => award.id === requestedUnitId));
     else {
-      app.innerHTML = homeView(data.units.map((item, index) => ({ ...getUnitWithVerbs(data, item.id), unlocked: isUnitUnlocked(progress, data.units, index) })));
+      app.innerHTML = homeView(data.units.map((item, index) => ({ ...getUnitWithVerbs(data, item.id), unlocked: unitIsUnlocked(index) })), weeklyReviewActive);
       showWelcomeBack();
     }
     if (pendingAward) app.insertAdjacentHTML('beforeend', celebrationView(pendingAward));
@@ -95,14 +98,14 @@ async function renderRoute() {
   }
 }
 
-function homeView(units) {
+function homeView(units, weeklyReviewActive = false) {
   const unit = [...units].reverse().find((item) => item.unlocked) || units[0];
   return `<section class="hero shell"><div class="hero-copy"><span class="season-tag">Season 01 · Rookie Camp</span>
     <div class="hero-callout"><span>${escapeHtml(playerProfile.nickname)}, become a</span><h1>Verb Buster!</h1></div><p>Meet the verbs. Learn their moves. Build a streak that’s all yours.</p>
     <div class="button-row"><a class="button button-primary" href="#training/${unit.id}">Enter Training Zone <span aria-hidden="true">→</span></a><a class="text-link" href="#training/${unit.id}">View Unit ${unit.number}</a></div></div>
     <div class="hero-player-card"><span class="hero-player-label">League player</span>${avatarSvg(playerProfile, 300)}<h2>${escapeHtml(playerProfile.nickname)}</h2><p>Your avatar leads every training mission.</p><a href="#profile">Customize avatar</a></div></section>
     ${weeklyMissionView()}
-    <section class="home-grid shell" aria-labelledby="today-heading"><div><span class="eyebrow">Your next move</span><h2 id="today-heading">Season lineup</h2>
+    <section class="home-grid shell" aria-labelledby="today-heading"><div><span class="eyebrow">Your next move</span><h2 id="today-heading">${weeklyReviewActive ? 'This week’s replay missions' : 'Season lineup'}</h2>
     <div class="unit-list">${units.map(unitCard).join('')}</div></div>
     <aside class="coach-note"><span class="coach-icon" aria-hidden="true">⚑</span><span class="eyebrow">Coach’s note</span><h2>No pressure. Just practice.</h2>
     <p>Mistakes tell you what to train next. This first visit is all about meeting the team.</p></aside></section>`;
@@ -126,11 +129,11 @@ function unitCard(unit) {
     <a class="round-link" href="${href}" aria-label="${unit.unlocked ? `Open ${unit.title}` : `${unit.title} is locked`}">${unit.unlocked ? '→' : '×'}</a></article>`;
 }
 
-function trainingHubView(units, preview = false) {
+function trainingHubView(units, preview = false, weeklyReviewActive = false) {
   const newest = units.at(-1) || units[0];
   return `<section class="training-hub shell"><header><span class="season-tag">Training Zone</span><h1>Choose your lesson</h1>
     ${preview ? '<p class="preview-note">Parent Preview · All lessons visible · Progress rules remain unchanged</p>' : ''}
-    <p>${preview ? 'Choose any lesson to review its video and training material.' : 'These are your active lessons. Score at least <strong>17/20</strong> in the newest challenge to unlock the next one.'}</p></header>
+    <p>${preview ? 'Choose any lesson to review its video and training material.' : weeklyReviewActive ? 'Your two replay missions stay active from Monday through Sunday. A new pair arrives next Monday.' : 'These are your active lessons. Score at least <strong>17/20</strong> in the newest challenge to unlock the next one.'}</p></header>
     <div class="training-hub-grid">${units.map(unitCard).join('')}</div>
     ${newest ? `<section class="personal-card"><div><span class="eyebrow">Smart review</span><h2>Train older trouble verbs</h2><p>Personal Training chooses practiced verbs that need more work.</p></div>
       <a class="button button-primary" href="#personal/${newest.id}" data-start-battle data-mode="personal" data-unit="${newest.id}">Personal Training →</a></section>` : ''}</section>`;
@@ -312,7 +315,7 @@ function resultsView(state) {
     <a class="text-link" href="#${state.mode === 'personal' ? 'personal' : 'battle'}/${state.unitId}" data-start-battle data-mode="${state.mode}" data-unit="${state.unitId}">Play another battle</a></div></section>`;
 }
 
-function scoreboardView(savedProgress, verbs, units) {
+function scoreboardView(savedProgress, verbs, units, reviewUnitIds = []) {
   const summary = progressSummary(savedProgress, verbs);
   return `<section class="scoreboard-page"><div class="shell"><header class="scoreboard-heading"><div><span class="season-tag">Player progress</span><h1>Scoreboard</h1>
     <p>Your practice stays on this device and helps choose what to train next.</p></div><div class="rank-badge"><small>LEVEL</small>${leagueLevel(summary.mastered)}</div></header>
@@ -328,7 +331,7 @@ function scoreboardView(savedProgress, verbs, units) {
     <section class="personal-card"><div><span class="eyebrow">Recommended next move</span><h2>${summary.trouble.length ? 'Train your Trouble Verbs' : 'Build stronger streaks'}</h2>
     <p>${summary.trouble.length ? summary.trouble.map((verb) => verb.base).join(' · ') : 'The coach will prioritize your lowest mastery skills.'}</p></div>
     <a class="button button-primary" href="#personal/${units[0].id}" data-start-battle data-mode="personal" data-unit="${units[0].id}">Start Personal Training →</a></section>`}
-    ${levelProgressView(savedProgress, units)}
+    ${levelProgressView(savedProgress, units, reviewUnitIds)}
     ${weeklyHistoryView()}
     <button class="reset-progress" type="button" data-reset-progress>Reset saved progress</button></div></section>`;
 }
@@ -339,12 +342,13 @@ function leagueLevel(mastered) {
   return '01';
 }
 
-function levelProgressView(savedProgress, units) {
+function levelProgressView(savedProgress, units, reviewUnitIds = []) {
+  const weeklyReviewActive = reviewUnitIds.length > 0;
   return `<section class="level-progress"><span class="eyebrow">Season levels</span><h2>Training map</h2><div>${units.map((unit, index) => {
-    const unlocked = isUnitUnlocked(savedProgress, units, index);
+    const unlocked = isUnitUnlocked(savedProgress, units, index, reviewUnitIds);
     const stats = savedProgress.units?.[unit.id];
     return `<article class="${unlocked ? 'is-unlocked' : 'is-locked'}"><span>${String(unit.number).padStart(2, '0')}</span><div><strong>${unit.title}</strong>
-      <small>${unlocked ? `${stats?.battlesCompleted || 0} Battles · Best ${stats?.bestScore || 0}/20` : `Score 17/20 in Unit ${String(index).padStart(2, '0')} to unlock`}</small></div>
+      <small>${unlocked ? `${weeklyReviewActive ? 'Weekly replay · ' : ''}${stats?.battlesCompleted || 0} Battles · Best ${stats?.bestScore || 0}/20` : weeklyReviewActive ? 'Completed · Resting this week' : `Score 17/20 in Unit ${String(index).padStart(2, '0')} to unlock`}</small></div>
       <a href="${unlocked ? `#training/${unit.id}` : '#scoreboard'}" aria-label="${unlocked ? `Open ${unit.title}` : `${unit.title} locked`}">${unlocked ? 'Open' : 'Locked'}</a></article>`;
   }).join('')}</div></section>`;
 }
@@ -353,6 +357,12 @@ function lockedUnitView(unit, previousUnit) {
   return `<section class="locked-page shell"><span class="season-tag">Level locked</span><div class="lock-symbol" aria-hidden="true">×</div><h1>${unit.title}</h1>
     <p>Score at least <strong>17/20</strong> in <strong>${previousUnit?.title || 'the previous unit'}</strong> to unlock this training level.</p>
     <a class="button button-primary" href="#training/${previousUnit?.id || 'everyday-actions'}">Return to previous level</a></section>`;
+}
+
+function weeklyReplayLockedView(unit) {
+  return `<section class="locked-page shell"><span class="season-tag">Replay mission resting</span><div class="lock-symbol" aria-hidden="true">↻</div><h1>${unit.title}</h1>
+    <p>This completed lesson is resting this week. Two different replay missions are active until Sunday.</p>
+    <a class="button button-primary" href="#training">View this week’s missions</a></section>`;
 }
 
 function battleReport(answers, stored = false) {

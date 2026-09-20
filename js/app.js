@@ -135,8 +135,12 @@ function trainingHubView(units, preview = false, weeklyReviewActive = false) {
     ${preview ? '<p class="preview-note">Parent Preview · All lessons visible · Progress rules remain unchanged</p>' : ''}
     <p>${preview ? 'Choose any lesson to review its video and training material.' : weeklyReviewActive ? 'Your two replay missions stay active from Monday through Sunday. A new pair arrives next Monday.' : 'These are your active lessons. Score at least <strong>17/20</strong> in the newest challenge to unlock the next one.'}</p></header>
     <div class="training-hub-grid">${units.map(unitCard).join('')}</div>
-    ${newest ? `<section class="personal-card"><div><span class="eyebrow">Smart review</span><h2>Train older trouble verbs</h2><p>Personal Training chooses practiced verbs that need more work.</p></div>
-      <a class="button button-primary" href="#personal/${newest.id}" data-start-battle data-mode="personal" data-unit="${newest.id}">Personal Training →</a></section>` : ''}</section>`;
+    ${newest ? personalTrainingCard(newest.id, 'Smart review', 'Train older trouble verbs', 'Personal Training chooses practiced verbs that need more work.') : ''}</section>`;
+}
+
+function personalTrainingCard(unitId, eyebrow, title, description) {
+  return `<section class="personal-card"><div class="personal-card-avatar">${avatarSvg(playerProfile, 130)}</div><div class="personal-card-copy"><span class="eyebrow">${eyebrow}</span><h2>${title}</h2><p>${description}</p></div>
+    <a class="button button-primary" href="#personal/${unitId}" data-start-battle data-mode="personal" data-unit="${unitId}">Personal Training →</a></section>`;
 }
 
 function trainingView(unit, preview = false) {
@@ -183,7 +187,7 @@ function battleView(state) {
   const progress = Math.round((state.index / state.questions.length) * 100);
   return `<section class="battle-page"><div class="shell battle-shell">
     <header class="battle-header"><div><span class="season-tag">${state.mode === 'personal' ? 'Personal Training' : 'Verb Battle'} · Unit ${String(state.unitNumber).padStart(2, '0')}</span><h1>Match in progress</h1></div>
-    <a href="#training/${state.unitId}" class="exit-link">Exit battle</a></header>
+    <div class="battle-header-actions">${state.mode === 'personal' ? avatarSvg(playerProfile, 86) : ''}<a href="#training/${state.unitId}" class="exit-link">Exit battle</a></div></header>
     <div class="battle-progress"><div class="progress-copy"><span>Question ${state.index + 1} of ${state.questions.length}</span><span>${progress}%</span></div>
     <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="${state.index}"><span style="width:${progress}%"></span></div></div>
     <article class="question-card" aria-labelledby="question-title"><span class="eyebrow">${question.kicker}</span><h2 id="question-title">${question.prompt}</h2>
@@ -308,11 +312,21 @@ function resultsView(state) {
   return `<section class="results-page shell"><span class="season-tag">Final whistle</span><h1>Battle complete!</h1>
     <div class="result-score"><strong>${correct}</strong><span>out of 20<br>correct</span></div>
     <p class="session-points"><strong>+${state.pointsEarned}</strong> League Points this Battle · Weekly total: ${weekly.points} / 1,000</p>
-    <p>${correct >= 16 ? 'Strong match! Your verb forms are taking shape.' : 'Good training. Every mistake shows what to practice next.'}</p>
+    ${state.mode === 'personal' ? personalTrainingResult(correct) : `<p>${correct >= 16 ? 'Strong match! Your verb forms are taking shape.' : 'Good training. Every mistake shows what to practice next.'}</p>`}
     ${missed.length ? `<section class="review-list"><span class="eyebrow">Review lineup</span><h2>Verbs to train again</h2><div>${[...new Set(missed.map((item) => item.question.verbId))].map((id) => `<span>${id}</span>`).join('')}</div></section>` : '<p class="perfect-result">Clean sweep — all twenty answers were correct!</p>'}
     ${battleReport(state.answers)}
     <div class="button-row"><a class="button button-primary" href="#scoreboard">View Scoreboard</a>
     <a class="text-link" href="#${state.mode === 'personal' ? 'personal' : 'battle'}/${state.unitId}" data-start-battle data-mode="${state.mode}" data-unit="${state.unitId}">Play another battle</a></div></section>`;
+}
+
+function personalTrainingResult(correct) {
+  if (correct >= 16) {
+    return `<section class="personal-result is-celebration"><div class="personal-result-stars" aria-hidden="true">★ ★ ★</div>${avatarSvg(playerProfile, 150)}<div><span class="eyebrow">Personal Training victory</span><h2>Excellent workout, ${escapeHtml(playerProfile.nickname)}!</h2><p>You trained hard and made your Verb Buster skills stronger.</p></div></section>`;
+  }
+  if (correct >= 10) {
+    return `<section class="personal-result">${avatarSvg(playerProfile, 130)}<div><span class="eyebrow">Keep training</span><h2>We can improve!</h2><p>You are making progress. Let’s practice the difficult verbs one more time.</p></div></section>`;
+  }
+  return `<section class="personal-result">${avatarSvg(playerProfile, 130)}<div><span class="eyebrow">Never give up</span><h2>Mistakes are part of learning.</h2><p>We will keep trying until you become a Verb Buster!</p></div></section>`;
 }
 
 function scoreboardView(savedProgress, verbs, units, reviewUnitIds = []) {
@@ -328,9 +342,7 @@ function scoreboardView(savedProgress, verbs, units, reviewUnitIds = []) {
       <div class="mastery-meter"><span style="width:${row.mastery}%"></span></div><b>${row.mastery}%</b><em class="status-${row.status.toLowerCase().replaceAll(' ', '-')}">${row.status}</em></article>`).join('')}</div></section>
     ${savedProgress.lastBattle ? `<section class="last-battle"><div><span class="eyebrow">Most recent result</span><h2>Last Verb Battle</h2><p>${savedProgress.lastBattle.correct} of ${savedProgress.lastBattle.total} correct · ${Math.round(savedProgress.lastBattle.correct / savedProgress.lastBattle.total * 100)}%</p></div>
       <details><summary>Review all answers</summary>${battleReport(savedProgress.lastBattle.answers, true)}</details></section>` : ''}
-    <section class="personal-card"><div><span class="eyebrow">Recommended next move</span><h2>${summary.trouble.length ? 'Train your Trouble Verbs' : 'Build stronger streaks'}</h2>
-    <p>${summary.trouble.length ? summary.trouble.map((verb) => verb.base).join(' · ') : 'The coach will prioritize your lowest mastery skills.'}</p></div>
-    <a class="button button-primary" href="#personal/${units[0].id}" data-start-battle data-mode="personal" data-unit="${units[0].id}">Start Personal Training →</a></section>`}
+    ${personalTrainingCard(units[0].id, 'Recommended next move', summary.trouble.length ? 'Train your Trouble Verbs' : 'Build stronger streaks', summary.trouble.length ? summary.trouble.map((verb) => verb.base).join(' · ') : 'The coach will prioritize your lowest mastery skills.')}`}
     ${levelProgressView(savedProgress, units, reviewUnitIds)}
     ${weeklyHistoryView()}
     <button class="reset-progress" type="button" data-reset-progress>Reset saved progress</button></div></section>`;

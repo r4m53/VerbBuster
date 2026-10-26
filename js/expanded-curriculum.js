@@ -81,7 +81,126 @@ const contexts = {
   overthrow:'unfair rulers in history stories',oversleep:'when alarms are turned off',overdo:'exercise when we ignore our limits',offset:'costs by saving energy',partake:'in the celebration together',preset:'the timer before baking',rebuild:'structures after the storm',remake:'old objects into something useful'
 };
 
+const exampleOverrides = {
+  draw: {
+    base: 'I draw comic heroes in my notebook.',
+    past: 'I drew a comic hero yesterday.',
+    participle: 'I have drawn three heroes this week.'
+  },
+  sing: {
+    base: 'We sing our favorite song together.',
+    past: 'We sang our favorite song at yesterday’s show.',
+    participle: 'We have sung that song many times.'
+  },
+  wear: {
+    base: 'Cyclists wear helmets when they ride.',
+    past: 'They wore helmets during yesterday’s race.',
+    participle: 'They have worn helmets on every ride.'
+  },
+  bleed: {
+    base: 'Small cuts sometimes bleed.',
+    past: 'My knee bled after I fell yesterday.',
+    participle: 'His finger has bled since the bandage came off.'
+  },
+  cost: {
+    base: 'School supplies cost less during the sale.',
+    past: 'My notebook cost five dollars yesterday.',
+    participle: 'The trip has cost less than we expected.'
+  },
+  lose: {
+    base: 'Players lose points when they rush.',
+    past: 'Our team lost two points yesterday.',
+    participle: 'We have lost points by rushing before.'
+  },
+  mean: {
+    base: 'Words mean different things in different sentences.',
+    past: 'The red light meant stop.',
+    participle: 'That word has meant the same thing for centuries.'
+  },
+  hurt: {
+    base: 'We hurt our knees when we fall.',
+    past: 'I hurt my knee when I fell yesterday.',
+    participle: 'She has hurt her knee before.'
+  },
+  sting: {
+    base: 'Bees sting when they feel threatened.',
+    past: 'A bee stung my arm yesterday.',
+    participle: 'A bee has stung him before.'
+  },
+  speed: {
+    base: 'Race cars speed around the track.',
+    past: 'The blue car sped past us yesterday.',
+    participle: 'That driver has sped around this track before.'
+  },
+  shine: {
+    base: 'Clean windows shine in the sunlight.',
+    past: 'The stars shone brightly last night.',
+    participle: 'The polished trophy has shone all day.'
+  },
+  sink: {
+    base: 'Heavy objects sink in water.',
+    past: 'The toy boat sank yesterday.',
+    participle: 'The ship has sunk to the bottom.'
+  },
+  awake: {
+    base: 'I awake before sunrise on camping trips.',
+    past: 'I awoke before the alarm yesterday.',
+    participle: 'I have awoken early all week.'
+  },
+  forbid: {
+    base: 'School rules forbid dangerous behavior.',
+    past: 'The teacher forbade running in the hallway.',
+    participle: 'School officials have forbidden open flames in the lab.'
+  },
+  lie: {
+    base: 'We lie on the grass and watch the clouds.',
+    past: 'We lay on the grass and watched the clouds yesterday.',
+    participle: 'We have lain on the grass for an hour.'
+  },
+  retake: {
+    base: 'I retake photos when they are blurry.',
+    past: 'My friends retook the class photo yesterday.',
+    participle: 'We have retaken that photo twice.'
+  },
+  undertake: {
+    base: 'We undertake projects that help our community.',
+    past: 'Our class undertook a recycling project last month.',
+    participle: 'Students have undertaken many service projects.'
+  },
+  upset: {
+    base: 'Careless words upset people.',
+    past: 'His comment upset his friend yesterday.',
+    participle: 'The news has upset many people.'
+  },
+  misunderstand: {
+    base: 'People misunderstand directions when they do not listen.',
+    past: 'I misunderstood the directions yesterday.',
+    participle: 'We have misunderstood that rule before.'
+  },
+  outgrow: {
+    base: 'Children outgrow clothes as they get taller.',
+    past: 'Sam outgrew his jacket last year.',
+    participle: 'She has outgrown her old shoes.'
+  },
+  overdo: {
+    base: 'Athletes overdo exercise when they ignore their limits.',
+    past: 'He overdid his workout yesterday.',
+    participle: 'I have overdone my training before.'
+  },
+  overthrow: {
+    base: 'Heroes overthrow unfair rulers in adventure stories.',
+    past: 'The rebels overthrew the king in the story.',
+    participle: 'The heroes have overthrown the cruel ruler.'
+  },
+  partake: {
+    base: 'We partake in the school celebration each year.',
+    past: 'I partook in the school feast yesterday.',
+    participle: 'Our class has partaken in this tradition before.'
+  }
+};
+
 function examples(base, past, participle, index) {
+  if (exampleOverrides[base]) return exampleOverrides[base];
   const context = contexts[base];
   const subjects = [
     ['I','Yesterday, I','I have'],

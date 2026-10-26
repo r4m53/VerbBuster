@@ -63,32 +63,27 @@ export function generateBattle(verbs) {
   return shuffle([...choices, ...writing]);
 }
 
-function takeVaried(candidates, count, selectedIds, maxPerVerb) {
+function takeVaried(candidates, count, selectedIds, verbUses, maxPerVerb) {
   const picked = [];
-  const perVerb = new Map();
   const available = candidates.filter(({ question }) => !selectedIds.has(question.id));
   for (const candidate of available) {
     if (picked.length >= count) break;
-    const uses = perVerb.get(candidate.question.verbId) || 0;
+    const uses = verbUses.get(candidate.question.verbId) || 0;
     if (uses >= maxPerVerb) continue;
     picked.push(candidate);
-    perVerb.set(candidate.question.verbId, uses + 1);
+    verbUses.set(candidate.question.verbId, uses + 1);
     selectedIds.add(candidate.question.id);
-  }
-  if (picked.length < count) {
-    for (const candidate of available) {
-      if (picked.length >= count) break;
-      if (selectedIds.has(candidate.question.id)) continue;
-      picked.push(candidate);
-      selectedIds.add(candidate.question.id);
-    }
   }
   return picked;
 }
 
-export function generateAdaptiveBattle(verbs, progressLookup) {
-  const candidates = generateQuestionPool(verbs).map((question) => {
+export function generateAdaptiveBattle(verbs, progressLookup, weeklyQuestionLookup = () => null) {
+  const candidates = generateQuestionPool(verbs).filter((question) => {
+    const weeklyRecord = weeklyQuestionLookup(question.id);
+    return !weeklyRecord?.reinforcementEarned;
+  }).map((question) => {
     const record = progressLookup(question.verbId, question.skill) || {};
+    const weeklyRecord = weeklyQuestionLookup(question.id) || {};
     const attempts = record.attempts || 0;
     const correct = record.correct || 0;
     return {
@@ -98,10 +93,12 @@ export function generateAdaptiveBattle(verbs, progressLookup) {
       errorRate: attempts ? Math.max(0, attempts - correct) / attempts : 0,
       mastery: record.mastery || 0,
       lastPracticed: record.lastPracticed ? Date.parse(record.lastPracticed) || 0 : 0,
+      rewardRank: weeklyRecord.correctEarned ? 1 : 0,
       tieBreaker: Math.random()
     };
   });
   const selectedIds = new Set();
+  const verbUses = new Map();
   const verbLastPracticed = new Map();
   candidates.forEach((candidate) => {
     verbLastPracticed.set(candidate.question.verbId, Math.max(
@@ -114,23 +111,25 @@ export function generateAdaptiveBattle(verbs, progressLookup) {
     b.mistakes - a.mistakes
     || b.errorRate - a.errorRate
     || a.mastery - b.mastery
+    || a.rewardRank - b.rewardRank
     || b.attempts - a.attempts
     || b.tieBreaker - a.tieBreaker
   );
-  const weak = takeVaried(weaknessOrder, 10, selectedIds, 2)
+  const weak = takeVaried(weaknessOrder, 10, selectedIds, verbUses, 2)
     .map(({ question }) => ({ ...question, trainingReason: 'weakness' }));
 
   const staleOrder = [...candidates].sort((a, b) =>
     verbLastPracticed.get(a.question.verbId) - verbLastPracticed.get(b.question.verbId)
     || a.lastPracticed - b.lastPracticed
     || a.mastery - b.mastery
+    || a.rewardRank - b.rewardRank
     || b.tieBreaker - a.tieBreaker
   );
-  const stale = takeVaried(staleOrder, 6, selectedIds, 1)
+  const stale = takeVaried(staleOrder, 6, selectedIds, verbUses, 2)
     .map(({ question }) => ({ ...question, trainingReason: 'stale' }));
 
   const randomOrder = shuffle(candidates.filter(({ question }) => !selectedIds.has(question.id)));
-  const random = takeVaried(randomOrder, 4, selectedIds, 1)
+  const random = takeVaried(randomOrder, 4, selectedIds, verbUses, 2)
     .map(({ question }) => ({ ...question, trainingReason: 'random' }));
 
   return shuffle([...weak, ...stale, ...random]);

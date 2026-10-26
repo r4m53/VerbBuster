@@ -211,7 +211,7 @@ function answerControl(question, feedback) {
     return `<div class="answer-options" role="group" aria-label="Answer choices">${question.options.map((option, index) =>
       `<button class="answer-option" type="button" data-answer="${option}" ${feedback ? 'disabled' : ''}><span>${String.fromCharCode(65 + index)}</span>${option}</button>`).join('')}</div>`;
   }
-  return `<form class="write-answer"><label for="written-answer">Your answer</label><div><input id="written-answer" name="answer" autocomplete="off" autocapitalize="none" spellcheck="false" required ${feedback ? 'disabled' : ''}>
+  return `<form class="write-answer"><label for="written-answer">Your answer</label><div><input id="written-answer" name="answer" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="done" required ${feedback ? 'disabled' : ''}>
     <button class="button button-primary" type="submit" ${feedback ? 'disabled' : ''}>Check answer</button></div></form>`;
 }
 
